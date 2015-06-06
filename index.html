@@ -1,387 +1,230 @@
-<!doctype html>
-<html lang="en">
-
-    <head>
-        <meta charset="utf-8">
-
-        <title>Symcloud</title>
-
-        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
-        <meta name="description" content="Symcloud">
-        <meta name="author" content="Johannes Wachter">
-
-        <meta name="apple-mobile-web-app-capable" content="yes"/>
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-        <link rel="stylesheet" href="css/reveal.min.css">
-        <link rel="stylesheet" href="css/custom.css">
-        <link rel="stylesheet" href="css/theme/default.css" id="theme">
-
-        <!-- For syntax highlighting -->
-        <link rel="stylesheet" href="lib/css/zenburn.css">
-
-        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
-        <script>
-            if (window.location.search.match(/print-pdf/gi)) {
-                var link = document.createElement('link');
-                link.rel = 'stylesheet';
-                link.type = 'text/css';
-                link.href = 'css/print/pdf.css';
-                document.getElementsByTagName('head')[0].appendChild(link);
-            }
-        </script>
-
-        <!--[if lt IE 9]>
-        <script src="lib/js/html5shiv.js"></script>
-        <![endif]-->
-    </head>
-
-    <body>
-
-        <div class="reveal">
-
-            <!-- Any section element inside of this container is displayed as a slide -->
-            <div class="slides">
-                <section id="start">
-                    <h1>Symcloud</h1>
-
-                    <p>
-                        Distributed File-Storage and Collaboration-Platform<br/>
-                        <a href="https://github.com/symcloud">https://github.com/symcloud</a>
-                    </p>
-
-                    <p>
-                        <small>Erstellt von <a href="https://github.com/wachterjohannes">Johannes Wachter</a>
-                            &nbsp;|&nbsp;
-                            <a href="https://twitter.com/WachterJohannes">@WachterJohannes</a></small>
-                    </p>
-                </section>
-
-                <!-- Über das Projekt -->
-                <section>
-                    <section data-markdown>
-                        <script type="text/template">
-                            ## Über das Projekt ...
-
-                            initiiert 2014
-
-                            als ein Thema für meine Masterarbeit ohne konkretes Ziel
-                        </script>
-                    </section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            ## ownCloud
-
-                            ownCloud is a self hosted file sync and share server. It provides access to your data
-                            through a web interface, sync clients or WebDAV while providing a platform to view, sync
-                            and share across devices easily—all under your control.
-                        </script>
-                    </section>
-
-                    <section data-background="http://i.giphy.com/fO1c8eUlcx2bS.gif"></section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            ### Spezifikationen
-
-                            * PHP & Symfony 2
-                            * Versionierung
-                            * Verteilung
-                            * Teilen
-                            * Sicher
-                        </script>
-                    </section>
-                </section>
-
-                <!-- Project Xanadu -->
-                <section>
-                    <section data-markdown>
-                        <script type="text/template">
-                            Inspiration
-
-                            # Project Xanadu
-                        </script>
-                    </section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            ### Hard Facts
-
-                            * was the first hypertext project
-                            * founded in 1960 by Ted Nelson
-                            * Main features:
-                                * Transclusions
-                                * Bidirectional links
-                                * Micropayment
-                                * Redundancy
-                        </script>
-                    </section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            „HTML ist exakt was wir zu VERHINDERN versucht haben - ständig tote Links, Links die nur nach außen führen, Zitate, die man nicht zu ihren Ursprüngen zurückverfolgen kann, keine Versionsverwaltung, keine Rechteverwaltung.“
-
-                            – Ted Nelson
-                        </script>
-                    </section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            ### Features
-
-                            * Transclusion
-                            * Bidirektionale Links
-                            * Micropayment
-                            * Versionierung
-                            * Redundanzen
-
-                            ***
-
-                            #### Bestand aus 17 Thesen.
-                        </script>
-                    </section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            ### Wichtige Thesen
-
-                            2. Every Xanadu server can be operated independently or in a network.
-                            4. Every user can search, retrieve, create and store documents.
-                            12. Every document can be rapidly searched, stored and retrieved without user knowledge of where it is physically stored.
-                            13. Every document is automatically stored redundantly to maintain availability even in case of a disaster.
-                        </script>
-                    </section>
-                </section>
-
-                <!-- Diaspora -->
-                <section>
-                    <section data-markdown>
-                        <script type="text/template">
-                            Inspiration
-
-                            # diaspora*
-                        </script>
-                    </section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            ### Hard Facts
-
-                            * open-source distributed social-network
-                            * founded 2010 by:
-                                * Dan Grippi
-                                * Maxwell Salzberg
-                                * Raphael Sofaer
-                                * Ilya Zhitomirskiy (†2011)
-                        </script>
-                    </section>
-
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            ![](https://diasporafoundation.org/assets/pages/about/network-distributed-e941dd3e345d022ceae909beccccbacd.png)
-                        </script>
-                    </section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            ### diaspora*
-
-                            * Decentralization
-                            * Freedom
-                            * Privacy
-
-                            ***
-
-                            ##### You Own Your Data
-                        </script>
-                    </section>
-
-                    <section data-background="http://i.giphy.com/9w9Bpoiddg72U.gif"></section>
-                </section>
-
-                <!-- symCloud -->
-                <section>
-                    <section data-markdown>
-                        <script type="text/template">
-                            # All in all
-
-                            Evaluierung und Entwicklung eines Verteilten Speicherkonzeptes als Grundlage für eine Filehosting und Collaboration Platform
-                        </script>
-                    </section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            Vision
-
-                            ## connect everything
-                        </script>
-                    </section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            ## Mit silex
-
-                            __TODO silex php example ?? live ??__
-                        </script>
-                    </section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            #### Open & Secure & Simple
-                            ### Filehosting Coudstorage
-                            #### to connect them all
-                        </script>
-                    </section>
-                </section>
-
-                <section>
-                    <section data-markdown data-background="img/architecture.png"></section>
-                </section>
-
-                <section>
-                    <section data-markdown data-background="img/data-model.png"></section>
-                </section>
-
-                <section>
-                    <section data-markdown>
-                        <script type="text/template">
-                            # Further topics
-                        </script>
-                    </section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            # Protocols
-                        </script>
-                    </section>
-                    <section data-markdown>
-                        <script type="text/template">
-                            ## webfinger
-
-                            WebFinger protocol can be used to discover information about people or other entities on
-                            the Internet using standard HTTP methods.
-
-                            [RFC-7033: WebFinger](https://tools.ietf.org/html/rfc7033)
-                        </script>
-                    </section>
-                    <section data-markdown>
-                        <script type="text/template">
-                            ## PubSubHubbub
-
-                            An open, simple, web-scale and decentralized pubsub protocol. Anybody can play.
-
-                            [PubSubHubbub Core 0.4 -- Working Draft](http://pubsubhubbub.github.io/PubSubHubbub/pubsubhubbub-core-0.4.html)
-                        </script>
-                    </section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            # Specification
-
-                            Full specification for transportlayer and datamodell which enables other programming languages to adapt it and connect all together
-                        </script>
-                    </section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            # Platform in SULU
-
-                            * start __sharing__
-                            * enable __editing__
-                            * discover __others__
-
-                            ***
-
-                            ### connect all together
-                        </script>
-                    </section>
-                </section>
-
-                <section>
-                    <section id="end">
-                        <h1>THE END</h1>
-
-                        <h3>von Wachter Johannes</h3>
-
-                        <p>Feel free to contribute (=</p>
-                    </section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            # Links
-
-                            * [Project Xanadu](http://xanadu.com/)
-                            * [The Xanadu Dream](http://blog.codinghorror.com/the-xanadu-dream/)
-                            * [The Curse of Xanadu](http://archive.wired.com/wired/archive//3.06/xanadu_pr.html)
-                            * [Xanadu - Ein Wissens- und Informationssystem](http://fsub.schule.de/freie/1freie-index.htm?/freie/xanadu.htm)
-                            * [How does diaspora* work?](https://diasporafoundation.org)
-                            * [On Diaspora's Social Network, You Own Your Data](http://www.bloomberg.com/bw/articles/2012-05-10/on-diasporas-social-network-you-own-your-data)
-                        </script>
-                    </section>
-                </section>
-            </div>
-        </div>
-
-        <script src="lib/js/head.min.js"></script>
-        <script src="js/reveal.min.js"></script>
-
-        <script>
-            // Full list of configuration options available here:
-            // https://github.com/hakimel/reveal.js#configuration
-            Reveal.initialize({
-                controls: true,
-                progress: true,
-                history: true,
-                center: true,
-
-                theme: Reveal.getQueryHash().theme || 'night', // available themes are in /css/theme
-                transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
-
-                // Parallax scrolling
-                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-                // parallaxBackgroundSize: '2100px 900px',
-
-                // Optional libraries used to extend on reveal.js
-                dependencies: [
-                    {
-                        src: 'lib/js/classList.js', condition: function() {
-                        return !document.body.classList;
-                    }
-                    },
-                    {
-                        src: 'plugin/markdown/marked.js', condition: function() {
-                        return !!document.querySelector('[data-markdown]');
-                    }
-                    },
-                    {
-                        src: 'plugin/markdown/markdown.js', condition: function() {
-                        return !!document.querySelector('[data-markdown]');
-                    }
-                    },
-                    {
-                        src: 'plugin/highlight/highlight.js', async: true, callback: function() {
-                        hljs.initHighlightingOnLoad();
-                    }
-                    },
-                    {
-                        src: 'plugin/zoom-js/zoom.js', async: true, condition: function() {
-                        return !!document.body.classList;
-                    }
-                    },
-                    {
-                        src: 'plugin/notes/notes.js', async: true, condition: function() {
-                        return !!document.body.classList;
-                    }
-                    }
-                ]
-            });
-
-        </script>
-
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Distributed File-Storage and Collaboration-Platform https://github.com/symcloud" />
+  <title>Symcloud</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css"/>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="bower_components/reveal.js/css/theme/night.css" id="theme">
+  <link rel="stylesheet" href="css/style.css"/>
+  <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+  <script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = 'bower_components/reveal.js/css/print/pdf.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+  </script>
+  <!--[if lt IE 9]>
+  <script src="bower_components/reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Symcloud</h1>
+    <h2 class="author">Distributed File-Storage and Collaboration-Platform <a href="https://github.com/symcloud" class="uri">https://github.com/symcloud</a></h2>
+    <h3 class="date"><small>Erstellt von <a href="https://github.com/wachterjohannes">Johannes Wachter</a> | <a href="https://twitter.com/WachterJohannes">@WachterJohannes</a></small></h3>
+</section>
+
+<section><section id="small" class="titleslide slide level1 small"><h1>Über das Projekt …</h1></section><section class="slide level2">
+
+<p>initiiert 2014</p>
+<p>als ein Thema für meine Masterarbeit ohne konkretes Ziel</p>
+</section><section id="owncloud" class="slide level2">
+<h1>ownCloud</h1>
+<p>ownCloud is a self hosted file sync and share server. It provides access to your data through a web interface, sync clients or WebDAV while providing a platform to view, sync and share across devices easily—all under your control.</p>
+</section><section id="spezifikationen" class="slide level2">
+<h1>Spezifikationen</h1>
+<ul>
+<li>PHP &amp; Symfony 2</li>
+<li>Versionierung</li>
+<li>Verteilung</li>
+<li>Teilen</li>
+<li>Sicher</li>
+</ul>
+</section></section>
+<section><section id="inspiration" class="titleslide slide level1"><h1>Inspiration</h1></section><section id="project-xanadu" class="slide level2">
+<h1>Project Xanadu</h1>
+</section><section id="hard-facts" class="slide level2">
+<h1>Hard Facts</h1>
+<ul>
+<li>first hypertext project</li>
+<li>founded in 1960 by Ted Nelson</li>
+<li>Main features:
+<ul>
+<li>Transclusions</li>
+<li>Bidirectional links</li>
+<li>Micropayment</li>
+<li>Redundancy</li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<p>„HTML ist exakt was wir zu VERHINDERN versucht haben - ständig tote Links, Links die nur nach außen führen, Zitate, die man nicht zu ihren Ursprüngen zurückverfolgen kann, keine Versionsverwaltung, keine Rechteverwaltung.“</p>
+<p>– Ted Nelson</p>
+</section><section id="features" class="slide level2">
+<h1>Features</h1>
+<ul>
+<li>Transclusion</li>
+<li>Bidirektionale Links</li>
+<li>Micropayment</li>
+<li>Versionierung</li>
+<li>Redundanzen</li>
+</ul>
+<hr/>
+<h4 id="bestand-aus-17-thesen.">Bestand aus 17 Thesen.</h4>
+</section><section id="wichtige-thesen" class="slide level2">
+<h1>Wichtige Thesen</h1>
+<ol start="2" type="1">
+<li>Every Xanadu server can be operated independently or in a network.</li>
+<li>Every user can search, retrieve, create and store documents.</li>
+<li>Every document can be rapidly searched, stored and retrieved without user knowledge of where it is physically stored.</li>
+<li>Every document is automatically stored redundantly to maintain availability even in case of a disaster.</li>
+</ol>
+</section></section>
+<section><section id="inspiration-1" class="titleslide slide level1"><h1>Inspiration</h1></section><section id="diaspora" class="slide level2">
+<h1>diaspora*</h1>
+</section><section id="hard-facts-1" class="slide level2">
+<h1>Hard Facts</h1>
+<ul>
+<li>open-source distributed social-network</li>
+<li>founded 2010 by:
+<ul>
+<li>Dan Grippi</li>
+<li>Maxwell Salzberg</li>
+<li>Raphael Sofaer</li>
+<li>Ilya Zhitomirskiy (†2011)</li>
+</ul></li>
+</ul>
+</section><section class="slide level2">
+
+<figure>
+<img src="https://diasporafoundation.org/assets/pages/about/network-distributed-e941dd3e345d022ceae909beccccbacd.png" alt="" />
+</figure>
+</section><section id="diaspora-1" class="slide level2">
+<h1>diaspora*</h1>
+<ul>
+<li>Decentralization</li>
+<li>Freedom</li>
+<li>Privacy</li>
+</ul>
+<hr/>
+<h3 id="you-own-your-data">You Own Your Data</h3>
+</section><section id="awesome" class="slide level2 hide-header" data-background="http://i.giphy.com/9w9Bpoiddg72U.gif">
+<h1>awesome</h1>
+</section></section>
+<section><section id="all-in-all" class="titleslide slide level1"><h1>All in all</h1></section><section class="slide level2">
+
+<p>Evaluierung und Entwicklung eines Verteilten Speicherkonzeptes als Grundlage für eine Filehosting und Collaboration Platform</p>
+</section><section class="slide level2">
+
+<p>Vision</p>
+<h3 id="connect-everything">connect everything</h3>
+</section><section id="mit-silex" class="slide level2">
+<h1>Mit silex</h1>
+<p><strong>TODO silex php example ?? live ??</strong></p>
+</section><section class="slide level2">
+
+<h4 id="open-secure-simple">Open &amp; Secure &amp; Simple</h4>
+<h3 id="filehosting-coudstorage">Filehosting Coudstorage</h3>
+<h4 id="to-connect-them-all">to connect them all</h4>
+</section></section>
+<section><section id="architecture" class="titleslide slide level1"><h1>Architecture</h1></section><section class="slide level2">
+
+<figure>
+<img src="img/architecture.png" alt="" />
+</figure>
+</section></section>
+<section><section id="datenmodell" class="titleslide slide level1"><h1>Datenmodell</h1></section><section id="git" class="slide level2">
+<h1>GIT</h1>
+<p>Datenmodell basiert auf GIT</p>
+<figure>
+<img src="img/git-data-model.png" alt="" />
+</figure>
+</section><section class="slide level2">
+
+<ul>
+<li>Hash-Value Datenbank</li>
+<li>Immutable Objekte</li>
+<li>Referenzen nicht in Datenbank</li>
+</ul>
+</section><section class="slide level2">
+
+<figure>
+<img src="img/data-model.png" alt="" />
+</figure>
+</section></section>
+<section><section id="protocols" class="titleslide slide level1"><h1>Protocols</h1></section><section id="webfinger" class="slide level2">
+<h1>webfinger</h1>
+<p>WebFinger protocol can be used to discover information about people or other entities on the Internet using standard HTTP methods.</p>
+<p><a href="https://tools.ietf.org/html/rfc7033">RFC-7033: WebFinger</a></p>
+</section><section id="pubsubhubbub" class="slide level2">
+<h1>PubSubHubbub</h1>
+<p>An open, simple, web-scale and decentralized pubsub protocol. Anybody can play.</p>
+<p><a href="http://pubsubhubbub.github.io/PubSubHubbub/pubsubhubbub-core-0.4.html">PubSubHubbub Core 0.4 – Working Draft</a></p>
+</section><section id="platform-in-sulu" class="slide level2">
+<h1>Platform in SULU</h1>
+<ul>
+<li>start <strong>sharing</strong></li>
+<li>enable <strong>editing</strong></li>
+<li>discover <strong>others</strong></li>
+</ul>
+<hr/>
+<h3 id="connect-all-together">connect all together</h3>
+</section><section id="specification" class="slide level2">
+<h1>Specification</h1>
+<p>Full specification for transportlayer and datamodell which enables other programming languages to adapt it and connect all together</p>
+</section></section>
+<section><section id="the-end" class="titleslide slide level1"><h1>The End</h1></section><section id="links" class="slide level2">
+<h1>Links</h1>
+<ul>
+<li><a href="http://xanadu.com/">Project Xanadu</a></li>
+<li><a href="http://blog.codinghorror.com/the-xanadu-dream/">The Xanadu Dream</a></li>
+<li><a href="http://archive.wired.com/wired/archive//3.06/xanadu_pr.html">The Curse of Xanadu</a></li>
+<li><a href="http://fsub.schule.de/freie/1freie-index.htm?/freie/xanadu.htm">Xanadu - Ein Wissens- und Informationssystem</a></li>
+<li><a href="https://diasporafoundation.org">How does diaspora* work?</a></li>
+<li><a href="http://www.bloomberg.com/bw/articles/2012-05-10/on-diasporas-social-network-you-own-your-data">On Diaspora’s Social Network, You Own Your Data</a></li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+
+  <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+  <script src="bower_components/reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,         // Display controls in the bottom right corner
+        progress: true,         // Display a presentation progress bar
+        history: true,          // Push each slide change to the browser history
+        center: true,                       // Vertical centering of slides
+        maxScale: 1.5,                  // Bounds for smallest/largest possible content scale
+        slideNumber: false,                // Display the page number of the current slide
+        theme: 'night', // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+//          { src: 'bower_components/reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; }, }
+//          { src: 'bower_components/reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+]});
+    </script>
     </body>
 </html>

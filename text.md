@@ -131,6 +131,8 @@ Das Datenmodell ist also der Zentrale Bestandteil, des Konzeptes. Die Bibliothek
 
 ### Verteilung ???
 
+__Beispiel von XtreemFS__
+
 Um die Konsistenz zu wahren implementiert symCloud ein einfaches primärbasiertes Protokoll, bei dem jedes Objekt einen Primären und eine gewisse Anzahl von Backup Servern besitzt. Der Primäre-Server ist dabei der Ersteller des Objektes und zuständig für die Auslieferung, Bearbeitung und die Benutzerrechte.
 
 Wird ein Objekt angelegt, wird dem Objekt eine sogenannte Policy zugewissen, in dem der aktuelle Server als Primary definiert wurde. Anhand von bestimmten Kriterien werden nun die Backup-Server ermittelt:
