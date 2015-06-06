@@ -1,0 +1,13 @@
+digraph symcloud {
+    Reference [shape = "rectangle"];
+    Commit [label = "Commit\l+ message"];
+
+    User -> Reference;
+    Reference -> Commit;
+    Commit -> Commit [label = "parent"];
+    Commit -> Tree;
+    Tree -> Tree [label = "subdir\l+ filename"];
+    Tree -> Reference [label = "symlink\l+ filename"];
+    Tree -> File [label = "file\l+ filename"];
+    File -> Chunk [label = "chunks\l+ index"];
+}

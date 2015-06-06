@@ -124,6 +124,18 @@ __TODO silex php example ?? live ??__
 
 # Datenmodell
 
+## GIT
+
+Datenmodell basiert auf GIT
+
+![](img/git-data-model.png)
+
+***
+
+* Hash-Value Datenbank
+* Immutable Objekte
+* Referenzen nicht in Datenbank
+
 ***
 
 ![](img/data-model.png)
