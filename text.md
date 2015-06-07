@@ -129,29 +129,82 @@ Dieses Datenmodell unterstützt die Kern-Features:
 
 Das Datenmodell ist also der Zentrale Bestandteil, des Konzeptes. Die Bibliothek, die dieses Modell umsetzt, muss sich darum kümmern, das die Daten verteilt werden und die Konsistenz zwischen den Servern gewahrt wird.
 
-### Verteilung ???
+## Datenbank
 
-__Beispiel von XtreemFS__
+Die Datenbank ist eine eigene entwicklung von Symcloud. Sie ist allerdings nicht sehr aufwendig. Es handelt sich im Grunde genommen um eine einfache Hash(key)-Value Datenbank.
+Dadurch ist sie vergleichbar mit der Datenbank von GIT. Allerdings wurde die Datenbank so gestalltet, dass sie mit verschiedenen Typen von Daten umgehen kann und nicht an das Datenmodell gebunden ist.
+Durch events bei den Store und Fetch Vorgängen ist sie flexibel erweiterbar.
 
-Um die Konsistenz zu wahren implementiert symCloud ein einfaches primärbasiertes Protokoll, bei dem jedes Objekt einen Primären und eine gewisse Anzahl von Backup Servern besitzt. Der Primäre-Server ist dabei der Ersteller des Objektes und zuständig für die Auslieferung, Bearbeitung und die Benutzerrechte.
+### Store
 
-Wird ein Objekt angelegt, wird dem Objekt eine sogenannte Policy zugewissen, in dem der aktuelle Server als Primary definiert wurde. Anhand von bestimmten Kriterien werden nun die Backup-Server ermittelt:
+__Sequencediagramm von Store__
+
+Der Speichervorgang ist im Grunde eine Serialisierung anhand von Klassenmetadaten. Anschließend wird das store event geworfen.
+Eventhandler haben daraufhin die Möglichkeit die Daten zu bearbeiten oder den Vorgang abzubrechen.
+Über den StorageAdapter werden die Daten mit dem Hash als Key auf das Speichermedium geschrieben und mit dem SearchAdapter
+werden die Objektmetadaten indexiert um eine Suche zu ermöglichen.
+
+Welche Daten serialisiert bzw. indexiert werden, kann in den Klassenmetadaten spezifiziert werden. Dabei ünterstützt die Datenbank auch Referenzen,
+die als Proxies aus der Datenbank geladen werden um Unendliche abhängigkeiten zu vermeiden.
+
+### Fetch
+
+__Sequencediagramm von Fetch__
+
+Der Ladevorgang ist genau das gegenteil. Um das laden von Daten anderer Server zu ermöglichen,
+wird das fetch event auch geworfen wenn die Daten im Lokalen Storage nicht gefunden werden.
+
+Auch hier haben die Eventhandler wider die Möglichkeit die Daten anzupassen oder abzubrechen.
+
+Diese beiden Vorgänge beschreiben eine einfache lokale Datenbank.
+
+### Replicator
+
+* Erstellt Replikationen im Netzwerk
+* Kümmert sich um Caching
+* Lädt Daten von anderen Servern nach
+* Um die Konsistenz zu wahren implementiert symCloud ein einfaches primärbasiertes Protokoll, bei dem jedes Objekt einen Primären und eine gewisse Anzahl von Backup Servern besitzt. Der Primäre-Server ist dabei der Ersteller des Objektes und zuständig für die Auslieferung, Bearbeitung und die Benutzerrechte.
+
+### XtreemFS
+ 
+Als Inspiration für ein solches Protokoll habe ich das verteilte Dateisysmte XtreemFS hergenommen.
+Es implementiert ebenfalls ein komplexeres Primärbasiertes Protokoll.
+
+Im Grunde besteht das Protokoll aus 5 Punkten:
+
+1. Der Client kontaktiert eine Server
+2. Dieser Server sich mit den anderen Servern und übernimmt den Primary Server für die angefragte Datei
+3. Der Client kann nun auf diesem Server Änderungen an der Datei ausführen. Für Lesezugriffe ist keine Kommunikation mit den anderen Servern nötig.
+4. Schreiboperationen werden zuerst lokal auf dem Primary-Server durchgeführt und dann an die Backup-Server weitergeleitet. Sobald die Backups das ACK zurücksenden, ist der Zustand des Systems wider konsistent
+5. Wenn der Primary-Server der Datei ausfällt, kann der Client einen beliebigen anderen Server anfragen.
+
+### Symcloud
+
+Für die Symcloud Datenbank habe ich eine einfachere Variante gewählt. Die die Daten immer dort bearbeiten, wo sie engelegt wurden.
+Dies ermöglicht nicht nur eine einfachere Implementierung es verhindert auch, dass sich bestimmte Server die Kontrolle über Objekte verschaffen, die sie nicht sehen sollten.
+
+Für Symcloud bedeutet das, aufgrund der immuatable Objekte aber kaum Einschränkungen. Nur der Zustand von Referenzen müssen live beim Server des Besitzers angefragt bzw. bearbeitet werden.
+Da alle anderen Objekte nicht bearbeitet werden.
+
+Wird ein Objekt angelegt, wird dem Objekt eine sogenannte Policy zugewissen, in dem der aktuelle Server als Primary definiert wurde. Anhand von bestimmten Kriterien werden nun die Backup-Server für das Objektermittelt.
+
+Es gibt drei Möglichkeiten, diese zu ermitteln. 
 
 * Vollständig: Das Objekt wird gleichmäßig auf eine konfigurierbare Anzahl von Servern verteilt, dabei ist das Objekt offen zugänglich für alle Benutzer
 * Rechte: Das Objekt wird aufgrund der Benutzerrechte auf die Server verteilt. Dabei wird es auf den Servern erstellt, auf denen Benutzer Zugriffsrechte auf das Objekt besitzen.
 * Stub: Der Typ stub bezeichnet das Anlegen des Objektes auf allen Servern. Dieses Objekt wird aber nicht komplett übertragen, sondern ist im Prinzip nur als Link zu dem Primary-Server zu verstehen. Es enthält also einen Link wo dieses Objekt zu finden ist.
 
-Dabei gibt es folgende Abläufe in der Datenbank von symCloud:
+Wenn ein Server, die Referenz eines anderen Benutzers verändern will, erstellt der Server neue Tree und Commit Objekte.
+Dann versucht er die Referenz zu bearbeiten und macht daher eine "store" Anfrage an den Primäry-Server der Referenz.
+Der Primary-Server kann diese Anfrage autentifizieren, validieren und ausführen, wenn alle Tests erfolgreich waren.
+  
+Wenn es hier zu einem Konflikt kommt, ist nur der eine Server betroffen und dieser kann versuchen den Konflikt aufzulösen. Strategien dazu wurden noch nicht betrachtet.
 
-__Sequencediagramm von Objekt speichern__
-
-__Sequencediagramm von Objekt laden__
-
-Alle Objekte, die vollständig oder auf Basis der Rechte verteilt werden, müssen immuatable sein. Dies ermöglicht neben caching auf den einzelnen Stationen auch die Konsistenz zu wahren. Veränderbare Objekte, wie die Referenzen, werden als Stub verteilt. Dies garantiert eine Konsistenz des Kompletten Systems, bei einem Konflikt, ist nur ein Server betroffen. 
+Es wenn der Server eine korrekte Anfrage stellt, bekommen es die anderen Server mit. Daher ist die Konsistenz des Systems zu jedem Zeitpunkt garantiert.
 
 __Ablaufdiagramm Konflikt__
 
-Diese einfachen Mechanismen, machen das Konzept übertragbar in fast alle Programmiersprachen. Auch der Speicherlayer ist variabel austauschbar. Neben dem Filesystem sind auch verteilte Datenbanken wie MongoDB, Riak oder Redis denkbar. Dies würde auch die Datensicherheit auf dem einzelnen Server verbessern. Dieser Storagelayer kann aber auch auf jedem Server anders gewählt werden. Dem gesamten System ist es egal was dahintersteht.
+Diese einfachen Mechanismen, machen das Konzept übertragbar in fast alle Programmiersprachen. Auch der Speicherlayer ist variabel austauschbar. Neben dem Filesystem sind auch verteilte Datenbanken wie MongoDB, Riak oder Redis denkbar. Dies würde auch die Datensicherheit auf dem einzelnen Server verbessern. Dieser Storagelayer kann aber auch auf jedem Server anders gewählt werden. Dem gesamten System ist es egal wo die Daten liegen.
 
 ## Weitere Entwicklungen
 

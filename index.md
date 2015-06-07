@@ -44,7 +44,6 @@ and share across devices easily—all under your control.
 
 – Ted Nelson
 
-
 ## Features
 
 * Transclusion
@@ -64,8 +63,6 @@ and share across devices easily—all under your control.
 12. Every document can be rapidly searched, stored and retrieved without user knowledge of where it is physically stored.
 13. Every document is automatically stored redundantly to maintain availability even in case of a disaster.
 
-# Inspiration
-
 ## diaspora*
 
 ## Hard Facts
@@ -80,7 +77,6 @@ and share across devices easily—all under your control.
 ***
 
 ![](https://diasporafoundation.org/assets/pages/about/network-distributed-e941dd3e345d022ceae909beccccbacd.png)
-
 
 ## diaspora*
 
@@ -98,7 +94,9 @@ and share across devices easily—all under your control.
 
 *** 
 
-Evaluierung und Entwicklung eines Verteilten Speicherkonzeptes als Grundlage für eine Filehosting und Collaboration Platform
+### Evaluierung und Entwicklung eines verteilten Speicherkonzeptes als Grundlage für eine Filehosting und Collaboration Platform
+
+(working title)
 
 ***
 
@@ -140,6 +138,63 @@ Datenmodell basiert auf GIT
 
 ![](img/data-model.png)
 
+# Datenbank
+
+## Store {.img-white}
+
+![](img/database/store.png)
+
+## Fetch {.img-white}
+
+![](img/database/fetch.png)
+
+## Replikator
+
+* Erstellt Replikationen im Netzwerk
+* Kümmert sich um Caching
+* Lädt Daten von anderen Servern nach
+* Implementiert ein Primärbasiertes Protokoll
+
+## XtreemFS
+
+* Inspiration bei der Replikation
+* Primärbasiertes Protokoll
+
+***
+
+![](http://xtreemfs.org/imgs/rw_repl_1.png)
+
+***
+
+![](http://xtreemfs.org/imgs/rw_repl_2.png)
+
+***
+
+![](http://xtreemfs.org/imgs/rw_repl_3.png)
+
+***
+
+![](http://xtreemfs.org/imgs/rw_repl_4.png)
+
+***
+
+![](http://xtreemfs.org/imgs/rw_repl_5.png)
+
+## symCloud
+
+* Daten immer dort bearbeiten, wo sie erstellt wurden.
+* 
+
+## on Fetch {.img-white}
+
+![](img/database/replicator-on-fetch.png)
+
+## on Store {.img-white}
+
+![](img/database/replicator-on-store.png)
+
+<small>Quelle [http://xtreemfs.org/how_replication_works.php](http://xtreemfs.org/how_replication_works.php)
+
 # Protocols
 
 ## webfinger
@@ -179,3 +234,4 @@ Full specification for transportlayer and datamodell which enables other program
 * [Xanadu - Ein Wissens- und Informationssystem](http://fsub.schule.de/freie/1freie-index.htm?/freie/xanadu.htm)
 * [How does diaspora* work?](https://diasporafoundation.org)
 * [On Diaspora's Social Network, You Own Your Data](http://www.bloomberg.com/bw/articles/2012-05-10/on-diasporas-social-network-you-own-your-data)
+* [XtreemFS - Under the Hood: File Replication](http://xtreemfs.org/how_replication_works.php)

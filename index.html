@@ -91,8 +91,7 @@
 <li>Every document can be rapidly searched, stored and retrieved without user knowledge of where it is physically stored.</li>
 <li>Every document is automatically stored redundantly to maintain availability even in case of a disaster.</li>
 </ol>
-</section></section>
-<section><section id="inspiration-1" class="titleslide slide level1"><h1>Inspiration</h1></section><section id="diaspora" class="slide level2">
+</section><section id="diaspora" class="slide level2">
 <h1>diaspora*</h1>
 </section><section id="hard-facts-1" class="slide level2">
 <h1>Hard Facts</h1>
@@ -125,7 +124,8 @@
 </section></section>
 <section><section id="all-in-all" class="titleslide slide level1"><h1>All in all</h1></section><section class="slide level2">
 
-<p>Evaluierung und Entwicklung eines Verteilten Speicherkonzeptes als Grundlage für eine Filehosting und Collaboration Platform</p>
+<h3 id="evaluierung-und-entwicklung-eines-verteilten-speicherkonzeptes-als-grundlage-für-eine-filehosting-und-collaboration-platform">Evaluierung und Entwicklung eines verteilten Speicherkonzeptes als Grundlage für eine Filehosting und Collaboration Platform</h3>
+<p>(working title)</p>
 </section><section class="slide level2">
 
 <p>Vision</p>
@@ -164,6 +164,73 @@
 <img src="img/data-model.png" alt="" />
 </figure>
 </section></section>
+<section><section id="datenbank" class="titleslide slide level1"><h1>Datenbank</h1></section><section id="store" class="slide level2 img-white">
+<h1>Store</h1>
+<figure>
+<img src="img/database/store.png" alt="" />
+</figure>
+</section><section id="fetch" class="slide level2 img-white">
+<h1>Fetch</h1>
+<figure>
+<img src="img/database/fetch.png" alt="" />
+</figure>
+</section><section id="replikator" class="slide level2">
+<h1>Replikator</h1>
+<ul>
+<li>Erstellt Replikationen im Netzwerk</li>
+<li>Kümmert sich um Caching</li>
+<li>Lädt Daten von anderen Servern nach</li>
+<li>Implementiert ein Primärbasiertes Protokoll</li>
+</ul>
+</section><section id="xtreemfs" class="slide level2">
+<h1>XtreemFS</h1>
+<ul>
+<li>Inspiration bei der Replikation</li>
+<li>Primärbasiertes Protokoll</li>
+</ul>
+</section><section class="slide level2">
+
+<figure>
+<img src="http://xtreemfs.org/imgs/rw_repl_1.png" alt="" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="http://xtreemfs.org/imgs/rw_repl_2.png" alt="" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="http://xtreemfs.org/imgs/rw_repl_3.png" alt="" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="http://xtreemfs.org/imgs/rw_repl_4.png" alt="" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="http://xtreemfs.org/imgs/rw_repl_5.png" alt="" />
+</figure>
+</section><section id="symcloud" class="slide level2">
+<h1>symCloud</h1>
+<ul>
+<li>Daten immer dort bearbeiten, wo sie erstellt wurden.</li>
+<li></li>
+</ul>
+</section><section id="on-fetch" class="slide level2 img-white">
+<h1>on Fetch</h1>
+<figure>
+<img src="img/database/replicator-on-fetch.png" alt="" />
+</figure>
+</section><section id="on-store" class="slide level2 img-white">
+<h1>on Store</h1>
+<figure>
+<img src="img/database/replicator-on-store.png" alt="" />
+</figure>
+<p><small>Quelle <a href="http://xtreemfs.org/how_replication_works.php" class="uri">http://xtreemfs.org/how_replication_works.php</a></p>
+</section></section>
 <section><section id="protocols" class="titleslide slide level1"><h1>Protocols</h1></section><section id="webfinger" class="slide level2">
 <h1>webfinger</h1>
 <p>WebFinger protocol can be used to discover information about people or other entities on the Internet using standard HTTP methods.</p>
@@ -194,6 +261,7 @@
 <li><a href="http://fsub.schule.de/freie/1freie-index.htm?/freie/xanadu.htm">Xanadu - Ein Wissens- und Informationssystem</a></li>
 <li><a href="https://diasporafoundation.org">How does diaspora* work?</a></li>
 <li><a href="http://www.bloomberg.com/bw/articles/2012-05-10/on-diasporas-social-network-you-own-your-data">On Diaspora’s Social Network, You Own Your Data</a></li>
+<li><a href="http://xtreemfs.org/how_replication_works.php">XtreemFS - Under the Hood: File Replication</a></li>
 </ul>
 </section></section>
     </div>
