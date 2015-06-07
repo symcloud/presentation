@@ -235,3 +235,4 @@ An open, simple, web-scale and decentralized pubsub protocol. Anybody can play.
 * [How does diaspora* work?](https://diasporafoundation.org)
 * [On Diaspora's Social Network, You Own Your Data](http://www.bloomberg.com/bw/articles/2012-05-10/on-diasporas-social-network-you-own-your-data)
 * [XtreemFS - Under the Hood: File Replication](http://xtreemfs.org/how_replication_works.php)
+* [symCloud Organisation](https://github.com/symcloud)

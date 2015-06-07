@@ -5,3 +5,7 @@
 .img-white img {
     background-color: white !important;
 }
+
+.author {
+    font-size: 1.25em !important;
+}
