@@ -39,6 +39,8 @@ Obwohl er die Umsetzung von Berners-Lee ablehnte ...
 „HTML ist exakt was wir zu VERHINDERN versucht haben - ständig tote Links, Links die nur nach außen führen, Zitate, die man nicht zu ihren Ursprüngen zurückverfolgen kann, keine Versionsverwaltung, keine Rechteverwaltung.“
 – Ted Nelson
 
+### Features
+
 Das Projekt definierte schon zu Beginn Features wie:
 
 * Transclusion (also die teilweise Einbindung von Objekte in eine anderes) - Zitate
@@ -173,38 +175,33 @@ Es implementiert ebenfalls ein komplexeres Primärbasiertes Protokoll.
 Im Grunde besteht das Protokoll aus 5 Punkten:
 
 1. Der Client kontaktiert eine Server
-2. Dieser Server sich mit den anderen Servern und übernimmt den Primary Server für die angefragte Datei
-3. Der Client kann nun auf diesem Server Änderungen an der Datei ausführen. Für Lesezugriffe ist keine Kommunikation mit den anderen Servern nötig.
+2. Dieser Server stimmt sich mit den anderen Servern ab und übernimmt den Primary Server für die angefragte Datei
+3. Der Client kann nun auf diesem Server Operationen auf der Datei ausführen. Für Lesezugriffe ist keine Kommunikation mit den anderen Servern nötig.
 4. Schreiboperationen werden zuerst lokal auf dem Primary-Server durchgeführt und dann an die Backup-Server weitergeleitet. Sobald die Backups das ACK zurücksenden, ist der Zustand des Systems wider konsistent
 5. Wenn der Primary-Server der Datei ausfällt, kann der Client einen beliebigen anderen Server anfragen.
 
 ### Symcloud
 
 Für die Symcloud Datenbank habe ich eine einfachere Variante gewählt. Die die Daten immer dort bearbeiten, wo sie engelegt wurden.
-Dies ermöglicht nicht nur eine einfachere Implementierung es verhindert auch, dass sich bestimmte Server die Kontrolle über Objekte verschaffen, die sie nicht sehen sollten.
+Dies ermöglicht nicht nur eine einfachere Implementierung es verhindert auch, dass sich bestimmte Server die Kontrolle über Objekte verschaffen, die sie nicht sehen dürfen.
 
 Für Symcloud bedeutet das, aufgrund der immuatable Objekte aber kaum Einschränkungen. Nur der Zustand von Referenzen müssen live beim Server des Besitzers angefragt bzw. bearbeitet werden.
-Da alle anderen Objekte nicht bearbeitet werden.
 
 Wird ein Objekt angelegt, wird dem Objekt eine sogenannte Policy zugewissen, in dem der aktuelle Server als Primary definiert wurde. Anhand von bestimmten Kriterien werden nun die Backup-Server für das Objektermittelt.
 
-Es gibt drei Möglichkeiten, diese zu ermitteln. 
-
-* Vollständig: Das Objekt wird gleichmäßig auf eine konfigurierbare Anzahl von Servern verteilt, dabei ist das Objekt offen zugänglich für alle Benutzer
-* Rechte: Das Objekt wird aufgrund der Benutzerrechte auf die Server verteilt. Dabei wird es auf den Servern erstellt, auf denen Benutzer Zugriffsrechte auf das Objekt besitzen.
-* Stub: Der Typ stub bezeichnet das Anlegen des Objektes auf allen Servern. Dieses Objekt wird aber nicht komplett übertragen, sondern ist im Prinzip nur als Link zu dem Primary-Server zu verstehen. Es enthält also einen Link wo dieses Objekt zu finden ist.
+### Konflikte
 
 Wenn ein Server, die Referenz eines anderen Benutzers verändern will, erstellt der Server neue Tree und Commit Objekte.
 Dann versucht er die Referenz zu bearbeiten und macht daher eine "store" Anfrage an den Primäry-Server der Referenz.
 Der Primary-Server kann diese Anfrage autentifizieren, validieren und ausführen, wenn alle Tests erfolgreich waren.
-  
+
 Wenn es hier zu einem Konflikt kommt, ist nur der eine Server betroffen und dieser kann versuchen den Konflikt aufzulösen. Strategien dazu wurden noch nicht betrachtet.
 
-Es wenn der Server eine korrekte Anfrage stellt, bekommen es die anderen Server mit. Daher ist die Konsistenz des Systems zu jedem Zeitpunkt garantiert.
+Erst wenn der Server eine korrekte Anfrage stellt, bekommen es die anderen Server mit. Daher ist die Konsistenz des Systems zu jedem Zeitpunkt garantiert.
 
 __Ablaufdiagramm Konflikt__
 
-Diese einfachen Mechanismen, machen das Konzept übertragbar in fast alle Programmiersprachen. Auch der Speicherlayer ist variabel austauschbar. Neben dem Filesystem sind auch verteilte Datenbanken wie MongoDB, Riak oder Redis denkbar. Dies würde auch die Datensicherheit auf dem einzelnen Server verbessern. Dieser Storagelayer kann aber auch auf jedem Server anders gewählt werden. Dem gesamten System ist es egal wo die Daten liegen.
+Diese einfachen Mechanismen, machen das Konzept übertragbar in fast alle Programmiersprachen. Auch der Speicherlayer ist variabel austauschbar. Neben dem Filesystem sind auch verteilte Datenbanken wie MongoDB, Riak oder Redis denkbar. Dies würde auch die Datensicherheit auf dem einzelnen Server verbessern.
 
 ## Weitere Entwicklungen
 

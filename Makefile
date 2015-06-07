@@ -6,6 +6,7 @@ presentation:
 images:
 	dot -Tpng -o img/git-data-model.png img/git-data-model.dot
 	dot -Tpng -o img/data-model.png img/data-model.dot
+	seqdiag img/conflict.seqdiag
 
 text:
 	pandoc text.md -o text.pdf

@@ -1,0 +1,5 @@
+seqdiag {
+	Server1 -> Server1 [label = "create tree and commit"];
+	Server1 => Server2 [label = "store", return = "conflict", note = "update reference from commit-1 to commit-2", color = "red"];
+
+}

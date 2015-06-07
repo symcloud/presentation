@@ -1,4 +1,4 @@
-% Symcloud
+% symCloud
 % Distributed File-Storage and Collaboration-Platform [https://github.com/symcloud](https://github.com/symcloud)
 % <small>Erstellt von [Johannes Wachter](https://github.com/wachterjohannes) | [\@WachterJohannes](https://twitter.com/WachterJohannes)</small>
 
@@ -16,6 +16,8 @@ ownCloud is a self hosted file sync and share server. It provides access to your
 through a web interface, sync clients or WebDAV while providing a platform to view, sync
 and share across devices easily—all under your control.
 
+## awesome {.hide-header data-background=http://i.giphy.com/fO1c8eUlcx2bS.gif}
+
 ## Spezifikationen
 
 * PHP & Symfony 2
@@ -28,15 +30,8 @@ and share across devices easily—all under your control.
 
 ## Project Xanadu
 
-## Hard Facts
-
 * first hypertext project
 * founded in 1960 by Ted Nelson
-* Main features:
-    * Transclusions
-    * Bidirectional links
-    * Micropayment
-    * Redundancy
 
 ***
 
@@ -58,10 +53,10 @@ and share across devices easily—all under your control.
 
 ## Wichtige Thesen
 
-2. Every Xanadu server can be operated independently or in a network.
-4. Every user can search, retrieve, create and store documents.
-12. Every document can be rapidly searched, stored and retrieved without user knowledge of where it is physically stored.
-13. Every document is automatically stored redundantly to maintain availability even in case of a disaster.
+* (2.) Every Xanadu server can be operated independently or in a network.
+* (4.) Every user can search, retrieve, create and store documents.
+* (12.) Every document can be rapidly searched, stored and retrieved without user knowledge of where it is physically stored.
+* (13.) Every document is automatically stored redundantly to maintain availability even in case of a disaster.
 
 ## diaspora*
 
@@ -128,13 +123,13 @@ Datenmodell basiert auf GIT
 
 ![](img/git-data-model.png)
 
-***
+## GIT
 
 * Hash-Value Datenbank
 * Immutable Objekte
 * Referenzen nicht in Datenbank
 
-***
+## symCloud
 
 ![](img/data-model.png)
 
@@ -180,22 +175,26 @@ Datenmodell basiert auf GIT
 
 ![](http://xtreemfs.org/imgs/rw_repl_5.png)
 
+<small>Quelle [http://xtreemfs.org/how_replication_works.php](http://xtreemfs.org/how_replication_works.php)</small>
+
 ## symCloud
 
 * Daten immer dort bearbeiten, wo sie erstellt wurden.
-* 
-
-## on Fetch {.img-white}
-
-![](img/database/replicator-on-fetch.png)
+* Immutable Objekte werden nicht bearbeitet
 
 ## on Store {.img-white}
 
 ![](img/database/replicator-on-store.png)
 
-<small>Quelle [http://xtreemfs.org/how_replication_works.php](http://xtreemfs.org/how_replication_works.php)
+## on Fetch {.img-white}
 
-# Protocols
+![](img/database/replicator-on-fetch.png)
+
+## Konflikt {.img-white}
+
+![](img/conflict.png)
+
+# Weitere Entwicklungen
 
 ## webfinger
 
@@ -218,11 +217,12 @@ An open, simple, web-scale and decentralized pubsub protocol. Anybody can play.
 
 <hr/>
 
-### connect all together
+### bring all together
 
-## Specification
+## Spezifikation
 
-Full specification for transportlayer and datamodell which enables other programming languages to adapt it and connect all together
+* für Transportlayer und Datenmodell
+* unabhängig von Programmiersprache
 
 # The End
 

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Distributed File-Storage and Collaboration-Platform https://github.com/symcloud" />
-  <title>Symcloud</title>
+  <title>symCloud</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -31,7 +31,7 @@
     <div class="slides">
 
 <section>
-    <h1 class="title">Symcloud</h1>
+    <h1 class="title">symCloud</h1>
     <h2 class="author">Distributed File-Storage and Collaboration-Platform <a href="https://github.com/symcloud" class="uri">https://github.com/symcloud</a></h2>
     <h3 class="date"><small>Erstellt von <a href="https://github.com/wachterjohannes">Johannes Wachter</a> | <a href="https://twitter.com/WachterJohannes">@WachterJohannes</a></small></h3>
 </section>
@@ -43,6 +43,8 @@
 </section><section id="owncloud" class="slide level2">
 <h1>ownCloud</h1>
 <p>ownCloud is a self hosted file sync and share server. It provides access to your data through a web interface, sync clients or WebDAV while providing a platform to view, sync and share across devices easily—all under your control.</p>
+</section><section id="awesome" class="slide level2 hide-header" data-background="http://i.giphy.com/fO1c8eUlcx2bS.gif">
+<h1>awesome</h1>
 </section><section id="spezifikationen" class="slide level2">
 <h1>Spezifikationen</h1>
 <ul>
@@ -55,18 +57,9 @@
 </section></section>
 <section><section id="inspiration" class="titleslide slide level1"><h1>Inspiration</h1></section><section id="project-xanadu" class="slide level2">
 <h1>Project Xanadu</h1>
-</section><section id="hard-facts" class="slide level2">
-<h1>Hard Facts</h1>
 <ul>
 <li>first hypertext project</li>
 <li>founded in 1960 by Ted Nelson</li>
-<li>Main features:
-<ul>
-<li>Transclusions</li>
-<li>Bidirectional links</li>
-<li>Micropayment</li>
-<li>Redundancy</li>
-</ul></li>
 </ul>
 </section><section class="slide level2">
 
@@ -85,15 +78,15 @@
 <h4 id="bestand-aus-17-thesen.">Bestand aus 17 Thesen.</h4>
 </section><section id="wichtige-thesen" class="slide level2">
 <h1>Wichtige Thesen</h1>
-<ol start="2" type="1">
-<li>Every Xanadu server can be operated independently or in a network.</li>
-<li>Every user can search, retrieve, create and store documents.</li>
-<li>Every document can be rapidly searched, stored and retrieved without user knowledge of where it is physically stored.</li>
-<li>Every document is automatically stored redundantly to maintain availability even in case of a disaster.</li>
-</ol>
+<ul>
+<li>(2.) Every Xanadu server can be operated independently or in a network.</li>
+<li>(4.) Every user can search, retrieve, create and store documents.</li>
+<li>(12.) Every document can be rapidly searched, stored and retrieved without user knowledge of where it is physically stored.</li>
+<li>(13.) Every document is automatically stored redundantly to maintain availability even in case of a disaster.</li>
+</ul>
 </section><section id="diaspora" class="slide level2">
 <h1>diaspora*</h1>
-</section><section id="hard-facts-1" class="slide level2">
+</section><section id="hard-facts" class="slide level2">
 <h1>Hard Facts</h1>
 <ul>
 <li>open-source distributed social-network</li>
@@ -119,7 +112,7 @@
 </ul>
 <hr/>
 <h3 id="you-own-your-data">You Own Your Data</h3>
-</section><section id="awesome" class="slide level2 hide-header" data-background="http://i.giphy.com/9w9Bpoiddg72U.gif">
+</section><section id="awesome-1" class="slide level2 hide-header" data-background="http://i.giphy.com/9w9Bpoiddg72U.gif">
 <h1>awesome</h1>
 </section></section>
 <section><section id="all-in-all" class="titleslide slide level1"><h1>All in all</h1></section><section class="slide level2">
@@ -151,15 +144,15 @@
 <figure>
 <img src="img/git-data-model.png" alt="" />
 </figure>
-</section><section class="slide level2">
-
+</section><section id="git-1" class="slide level2">
+<h1>GIT</h1>
 <ul>
 <li>Hash-Value Datenbank</li>
 <li>Immutable Objekte</li>
 <li>Referenzen nicht in Datenbank</li>
 </ul>
-</section><section class="slide level2">
-
+</section><section id="symcloud" class="slide level2">
+<h1>symCloud</h1>
 <figure>
 <img src="img/data-model.png" alt="" />
 </figure>
@@ -213,25 +206,30 @@
 <figure>
 <img src="http://xtreemfs.org/imgs/rw_repl_5.png" alt="" />
 </figure>
-</section><section id="symcloud" class="slide level2">
+<p><small>Quelle <a href="http://xtreemfs.org/how_replication_works.php" class="uri">http://xtreemfs.org/how_replication_works.php</a></small></p>
+</section><section id="symcloud-1" class="slide level2">
 <h1>symCloud</h1>
 <ul>
 <li>Daten immer dort bearbeiten, wo sie erstellt wurden.</li>
-<li></li>
+<li>Immutable Objekte werden nicht bearbeitet</li>
 </ul>
-</section><section id="on-fetch" class="slide level2 img-white">
-<h1>on Fetch</h1>
-<figure>
-<img src="img/database/replicator-on-fetch.png" alt="" />
-</figure>
 </section><section id="on-store" class="slide level2 img-white">
 <h1>on Store</h1>
 <figure>
 <img src="img/database/replicator-on-store.png" alt="" />
 </figure>
-<p><small>Quelle <a href="http://xtreemfs.org/how_replication_works.php" class="uri">http://xtreemfs.org/how_replication_works.php</a></p>
+</section><section id="on-fetch" class="slide level2 img-white">
+<h1>on Fetch</h1>
+<figure>
+<img src="img/database/replicator-on-fetch.png" alt="" />
+</figure>
+</section><section id="konflikt" class="slide level2 img-white">
+<h1>Konflikt</h1>
+<figure>
+<img src="img/conflict.png" alt="" />
+</figure>
 </section></section>
-<section><section id="protocols" class="titleslide slide level1"><h1>Protocols</h1></section><section id="webfinger" class="slide level2">
+<section><section id="weitere-entwicklungen" class="titleslide slide level1"><h1>Weitere Entwicklungen</h1></section><section id="webfinger" class="slide level2">
 <h1>webfinger</h1>
 <p>WebFinger protocol can be used to discover information about people or other entities on the Internet using standard HTTP methods.</p>
 <p><a href="https://tools.ietf.org/html/rfc7033">RFC-7033: WebFinger</a></p>
@@ -247,10 +245,13 @@
 <li>discover <strong>others</strong></li>
 </ul>
 <hr/>
-<h3 id="connect-all-together">connect all together</h3>
-</section><section id="specification" class="slide level2">
-<h1>Specification</h1>
-<p>Full specification for transportlayer and datamodell which enables other programming languages to adapt it and connect all together</p>
+<h3 id="bring-all-together">bring all together</h3>
+</section><section id="spezifikation" class="slide level2">
+<h1>Spezifikation</h1>
+<ul>
+<li>für Transportlayer und Datenmodell</li>
+<li>unabhängig von Programmiersprache</li>
+</ul>
 </section></section>
 <section><section id="the-end" class="titleslide slide level1"><h1>The End</h1></section><section id="links" class="slide level2">
 <h1>Links</h1>
