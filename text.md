@@ -100,10 +100,6 @@ Zusammenfassend ist symCloud keine einzelne Plattform, es ist eine Spezifikation
 
 Kommen wir nun zu dem Technischen Part und durchleuchten das Konzept etwas genauer.
 
-### Übersicht
-
-__Bild von Übersicht (Abbildung 10)__
-
 ### Datenmodell
 
 Das Konzept von symCloud wurde rundum das Datenmodell definiert. Das Datenmodell wiederum ist eine Weiterentwicklung des Datenmodells von GIT. Wer dieses Datenmodell nicht kennt, ist hier ein Beispiel dafür.
@@ -130,6 +126,10 @@ Dieses Datenmodell unterstützt die Kern-Features:
 * Rechteverwaltung
 
 Das Datenmodell ist also der Zentrale Bestandteil, des Konzeptes. Die Bibliothek, die dieses Modell umsetzt, muss sich darum kümmern, das die Daten verteilt werden und die Konsistenz zwischen den Servern gewahrt wird.
+
+### Übersicht
+
+__Bild von Übersicht (Abbildung 10)__
 
 ## Datenbank
 

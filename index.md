@@ -109,12 +109,6 @@ __TODO silex php example ?? live ??__
 ### Filehosting Coudstorage
 #### to connect them all
 
-# Architektur
-
-***
-
-![](img/architecture.png)
-
 # Datenmodell
 
 ## GIT
@@ -122,6 +116,12 @@ __TODO silex php example ?? live ??__
 Datenmodell basiert auf GIT
 
 ![](img/git-data-model.png)
+
+# Architektur
+
+***
+
+![](img/architecture.png)
 
 ## GIT
 
