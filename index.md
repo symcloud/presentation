@@ -99,10 +99,6 @@ Vision
 
 ### connect everything
 
-## Mit silex
-
-__TODO silex php example ?? live ??__
-
 *** 
 
 #### Open & Secure & Simple
