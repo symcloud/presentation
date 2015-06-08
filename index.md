@@ -1,5 +1,5 @@
 % symCloud
-% Distributed File-Storage and Collaboration-Plattform [https://github.com/symcloud](https://github.com/symcloud)
+% Verteilte Filehosting- und Kollaborations- Plattform [https://github.com/symcloud](https://github.com/symcloud)
 % <small>Erstellt von [Johannes Wachter](https://github.com/wachterjohannes) | [\@WachterJohannes](https://twitter.com/WachterJohannes)</small>
 
 # Über das Projekt ... {#small .small}
