@@ -9,4 +9,4 @@ images:
 	seqdiag img/conflict.seqdiag
 
 text:
-	pandoc text.md -o text.pdf
+	pandoc text.md -o text.pdf -V geometry:margin=1in
