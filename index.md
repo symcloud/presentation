@@ -117,12 +117,6 @@ Datenmodell basiert auf GIT
 
 ![](img/git-data-model.png)
 
-# Architektur
-
-***
-
-![](img/architecture.png)
-
 ## GIT
 
 * Hash-Value Datenbank
@@ -132,6 +126,12 @@ Datenmodell basiert auf GIT
 ## symCloud
 
 ![](img/data-model.png)
+
+# Architektur
+
+***
+
+![](img/architecture.png)
 
 # Datenbank
 
