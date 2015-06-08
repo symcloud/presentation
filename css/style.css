@@ -9,3 +9,7 @@
 .author {
     font-size: 1.25em !important;
 }
+
+.smaller-title h1 {
+    font-size: 3.7em !important;
+}

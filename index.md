@@ -1,5 +1,5 @@
 % symCloud
-% Distributed File-Storage and Collaboration-Platform [https://github.com/symcloud](https://github.com/symcloud)
+% Distributed File-Storage and Collaboration-Plattform [https://github.com/symcloud](https://github.com/symcloud)
 % <small>Erstellt von [Johannes Wachter](https://github.com/wachterjohannes) | [\@WachterJohannes](https://twitter.com/WachterJohannes)</small>
 
 # Über das Projekt ... {#small .small}
@@ -24,7 +24,7 @@ and share across devices easily—all under your control.
 * Versionierung
 * Verteilung
 * Teilen
-* Sicher
+* Sicherheit
 
 # Inspiration
 
@@ -89,7 +89,7 @@ and share across devices easily—all under your control.
 
 *** 
 
-### Evaluierung und Entwicklung eines verteilten Speicherkonzeptes als Grundlage für eine Filehosting und Collaboration Platform
+### Evaluierung und Entwicklung eines verteilten Speicherkonzeptes als Grundlage für eine Filehosting- und Kollaborations- Plattform
 
 (working title)
 
@@ -109,7 +109,7 @@ __TODO silex php example ?? live ??__
 ### Filehosting Coudstorage
 #### to connect them all
 
-# Architecture
+# Architektur
 
 ***
 
@@ -148,7 +148,7 @@ Datenmodell basiert auf GIT
 * Erstellt Replikationen im Netzwerk
 * Kümmert sich um Caching
 * Lädt Daten von anderen Servern nach
-* Implementiert ein Primärbasiertes Protokoll
+* Implementiert ein primärbasiertes Protokoll
 
 ## XtreemFS
 
@@ -179,7 +179,7 @@ Datenmodell basiert auf GIT
 
 ## symCloud
 
-* Daten immer dort bearbeiten, wo sie erstellt wurden.
+* Daten immer dort bearbeiten, wo sie erstellt wurden
 * Immutable Objekte werden nicht bearbeitet
 
 ## on Store {.img-white}
@@ -194,7 +194,7 @@ Datenmodell basiert auf GIT
 
 ![](img/conflict.png)
 
-# Weitere Entwicklungen
+# Ausblick
 
 ## webfinger
 
@@ -209,7 +209,7 @@ An open, simple, web-scale and decentralized pubsub protocol. Anybody can play.
 
 [PubSubHubbub Core 0.4 -- Working Draft](http://pubsubhubbub.github.io/PubSubHubbub/pubsubhubbub-core-0.4.html)
 
-## Platform in SULU
+## Plattform in SULU {.smaller-title}
    
 * start __sharing__
 * enable __editing__
@@ -221,8 +221,9 @@ An open, simple, web-scale and decentralized pubsub protocol. Anybody can play.
 
 ## Spezifikation
 
-* für Transportlayer und Datenmodell
-* unabhängig von Programmiersprache
+* Für Transportlayer und Datenmodell
+* Unabhängig von Programmiersprache
+* Erleichtert integration
 
 # The End
 
