@@ -34,3 +34,21 @@
 	font-size: 18px;
 	font-style: italic;
 }
+
+div.half {
+	float: left;
+	width: 48%;
+	margin-bottom: 30px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+
+div.half ul {
+	list-style: none;
+	font-size: 25px;
+	text-align: center;
+}
+
+#personas {
+	font-size: 16px;
+}
