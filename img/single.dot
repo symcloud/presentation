@@ -1,0 +1,16 @@
+digraph B {
+	alice[label="\l\l\l\l\l\l\l\l\l\lhttp://alice.com", image="img/alice.jpg", shape="rectangle"];
+	bob[label="\l\l\l\l\l\l\l\l\l\lhttp://bob.com", image="img/bob.jpg", shape="rectangle"];
+
+	bobPC1[label="", image="img/computer.png"];
+	bobPC2[label="", image="img/computer.png"];
+
+	bobPC1 -> bob[dir=both];
+	bobPC2 -> bob[dir=both];
+
+	alicePC1[label="", image="img/computer.png"];
+	alicePC2[label="", image="img/computer.png"];
+
+	alicePC1 -> alice[dir=both];
+	alicePC2 -> alice[dir=both];
+}

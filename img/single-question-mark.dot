@@ -1,0 +1,22 @@
+digraph B {	
+	alice[label="\l\l\l\l\l\l\l\l\l\lhttp://alice.com", image="img/alice.jpg", shape="rectangle"];
+	questionMark[label="?"];
+	bob[label="\l\l\l\l\l\l\l\l\l\lhttp://bob.com", image="img/bob.jpg", shape="rectangle"];
+
+	questionMark -> bob[dir=back];
+	alice -> questionMark;
+	
+	bobPC1[label="", image="img/computer.png"];
+	bobPC2[label="", image="img/computer.png"];
+
+	bobPC1 -> bob;
+	bobPC2 -> bob;
+
+	alicePC1[label="", image="img/computer.png"];
+	alicePC2[label="", image="img/computer.png"];
+
+	alicePC1 -> alice;
+	alicePC2 -> alice;
+
+	{rank = same; alice questionMark bob; }
+}

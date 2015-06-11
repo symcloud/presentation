@@ -48,33 +48,42 @@ and share across devices easily—all under your control.
 
 ## Alleinstehende Server
 
-![TODO Bild von zwei unverbundenen Server](img/single.png)
+![](img/single.png)
 
-## Verbindung ?
+## Teilen
 
-![TODO Bild von zwei unverbundenen Server](img/single-question-mark.png)
+![](img/single-question-mark.png)
 
 ## Simpsons {.hide-header data-background=http://i.giphy.com/8EmeieJAGjvUI.gif}
 
-## Ablaufdiagramm Szenario
+## Ablauf
+
+![](img/sequence.png)
 
 ## Awesome {.hide-header data-background=http://i.giphy.com/9w9Bpoiddg72U.gif}
 
-## Full Qualified Name
-
-![Full Qualified Name](img/fqn.png)
-
 # Features
 
-***
+## Verteilung
 
-* Verteilung
-* Versionierung
-* Datensicherheit
+* Kommunikation zwischen Servern
+* Benutzerinteraktion
+
+## Versionierung
+
+* Änderung bewirkt neue Version
+* Nachverfolgung und Wiederherstellung
+
+## Datensicherheit
+
+* Kontrollierbare Umgebung
+* Schutz vor Fremdzugriff
+* Ausfallsicherheit
+* Replikationen auf vertrauenswürdigen Servern
 
 # Zusammenfassung
 
-Du entscheidest wer deine Daten sieht
+Du entscheidest wer deine Daten sieht!
 
 # The End
 

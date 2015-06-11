@@ -25,9 +25,7 @@ Der aktuelle mehr oder weniger fixe Titel der Arbeit lautet:
 
 Es befasst sich also immer noch mit den Anforderungen an eine Filehosting- und Kollaborations- Plattform, jedoch geht es in der Arbeit mehr um die Konzepte, die es ermöglichen sollen, die Daten zu verwalten.
 
-Daher kann ich euch heute leider nur über diese Konzepte erzählen. Jedoch versuche ich es so zu gestalten, dass alle von euch eine Idee haben werden, wie ein solches Konzept funktionieren kann.
-
-### Das Szenario
+## Das Szenario
 
 Das Konzept versuche ich euch anhand eines kleinen Szenarios zu erläutern.
 
@@ -60,45 +58,41 @@ Eines Tages treffen sich die Beiden Studenten in einem Fächerübergreifendem Mo
 
 Das nennt man ein klassisches Dilemma.
 
-### ?Simpsons? (http://i.giphy.com/8EmeieJAGjvUI.gif)
+### Simpsons (http://i.giphy.com/8EmeieJAGjvUI.gif)
 
-Jetzt muss man sich Fragen: Ist das Konzept voll zum vergessen?
+Für Homer scheint es hier nur eine einzige Lösung zu geben ...
 
 ### Verteilte Server
 
-Nein ist es nicht. Den symCloud ist genau für diesen Fall ausgelegt. Es ermöglicht eigenständigen Servern. Die Dateien eines speziellen Benutzers zu teilen. Dazu legt Alice einen neuen Ordner an, den derjenige dann für den Benutzer "bob@bobs-symcloud.com" freigibt. Daraufhin kann der Server von Alice beim Server von Bob nachfragen, ob es den Benutzer bob gibt. Der Server antwortet natürlich ja den gibts. Alice-Server sendet daraufhin die Anfrage zum Teilen des Ordner an der Server von Bob. Der Benutzer Bob kann das dann bestätigen.
+Aber zum Glück bietet symCloud genau für diesen Fall einen Ausweg. Es ermöglicht den eigenständigen Servern von Alice und Bob Dateien und Ordner zu teilen. Dazu legt Alice einen neuen Ordner an, den sie für den Benutzer "bob@bob.com" freigibt. Daraufhin kann der Server von Alice beim Server von Bob nachfragen, ob er den Benutzer bob kennt. Der Server antwortet natürlich mit "ja". Der Server von Alice sendet daraufhin die Anfrage zum Teilen des Ordner an der Server von Bob. Der Benutzer Bob kann diese dann bestätigen.
 
-Mit der Bestätigung der Anfrage hört der Server von Bob nun auf Änderungen in diesem Ordner, die der Server von Alice automatisch zur Verfügung stellt. Was soviel bedeutet, dass wenn Alice eine Datei bearbeitet, bekommt der Server von Bob das mit und kann die Daten auf seinem Rechner updaten.
+Mit der Bestätigung der Anfrage hört der Server von Bob nun auf Änderungen in diesem Ordner, welche der Server von Alice automatisch zur Verfügung stellt. Was soviel bedeutet, dass wenn Alice eine Datei bearbeitet, bekommt der Server von Bob das mit und kann die Dateien in seinem Speicher updaten.
 
-Auch umgekehrt ist dies möglich. Wenn Bob eine Datei in dem Ordner bearbeitet, dann leitet der Server von Bob diese Anfrage automatisch an den Server von Alice weiter.
+Auch umgekehrt ist dies möglich. Wenn Bob eine Datei in dem Ordner bearbeitet, dann leitet der Server von Bob diese Anfrage automatisch an den Server von Alice weiter. Woraufhin auch Alice die neuesten Versionen der Dateien auf Ihrem Server hat.
 
-Woraufhin auch Alice die neuesten Versionen der Dateien auf Ihrem Rechner hat.
+Diese Mechanismen werden von der Software automatisch durchgeführt. Das einzige was Alice wissen muss ist der Name von Bob und die URL des Servers, auf dem Bob registriert ist.
 
 ### Awesome
 
-Diese Automatismen werden von dem System vollständig und automatisiert ausgeführt.
+Problem gelöst (=
 
-### Full Qualified Name
-
-Das einzige was Alice wissen muss um die Daten mit Bob zu teilen, ist sein FullQualifiedName. Also der Name von Bob und die Hostadresse seines Servers.
-
-Danach können die beiden zusammenarbeiten, als ob Sie auf einem System registriert wären ohne das Sie von den "komplexen" Prozessen etwas mitbekommen.
-
-### Features
+## Features
 
 Die wichtigsten Features von symCloud im Überblick:
 
-Verteilung
+### Verteilung
 
-:   Haben wir gerade gesehen ist ein zentraler Bestandteil des System.
+Gerade haben wir gesehen, dass die Verteilung der Daten zwischen den Servern ein zentraler Bestandteil des Systems sind. Es wird benötigt um verschiedene Server miteinander zu verknüpfen und dadurch die Benutzerinteraktion auf verschiedenen Servern zu ermöglichen.
 
-Versionierung
+### Versionierung
 
-:   Jede Änderung an einer Datei bewirkt das erstellen einer Version im System. Daher können Änderungen an einer Datei nachverfolgt und zurückgesetzt werden.
+Jede Änderung an einer Datei bewirkt das erstellen einer Version im System. Daher können Änderungen an einer Datei nachverfolgt und zurückgesetzt werden.
 
-Datensicherheit
+### Datensicherheit
 
-:   Was nicht nur bedeutet, dass man seine Dateien auf seinem eigenen Server speichert, sondern auch, dass verteilte Daten davor geschützt werden, dass Sie bei einem Ausfall des Servers nicht verloren gehen. Dies wird erreicht, das Dateien auf verschiedenen Servern erstellt werden. Dabei hat der Benutzer die Freiheit zu sagen, welche Server für Ihn vertrauenswürdig sind und welche nicht.
+Bei der Datensicherheit geht es darum, die Daten sicher vor Fremdzugriff geschützt sind. Dafür kann das System in einer Kontrollierbaren Umgebung installiert werden. 
+
+Was nicht nur bedeutet, dass man seine Dateien auf seinem eigenen Server speichert, sondern auch, dass verteilte Daten davor geschützt werden, dass Sie bei einem Ausfall des Servers nicht verloren gehen. Dies wird erreicht, das Dateien auf verschiedenen Servern erstellt werden. Dieser Vorgang nennt sich Replizieren. Dabei hat der Benutzer die Freiheit zu sagen, welche Server für Ihn vertrauenswürdig sind und welche nicht.
 
 ### Zusammenfassung
 
@@ -106,6 +100,4 @@ SymCloud ist also im gesamten gesehen, für Benutzer eine Möglichkeit, seine Da
 
 ### The End
 
-Danke für eure Zeit.
-
-Ich hoffe ich konnte euch heute etwas neues erzählen und habe ich nicht zu sehr gelangweilt mit meiner ausführung.
+Danke für eure Aufmerksamkeit. Ich hoffe ich konnte meine ausführungen so gestalten, dass Sie alle verstehen konnten. Falls es fragen gibt, kann ich die natürlich gerne noch beantworten.

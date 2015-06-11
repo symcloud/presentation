@@ -1,0 +1,25 @@
+digraph B {	
+	alice[label="\l\l\l\l\l\l\l\l\l\lhttp://alice.com", image="img/alice.jpg", shape="rectangle"];
+	bob[label="\l\l\l\l\l\l\l\l\l\lhttp://bob.com", image="img/bob.jpg", shape="rectangle"];
+	
+	bobPC1[label="", image="img/computer.png"];
+	bobPC2[label="", image="img/computer.png"];
+
+	bobPC1 -> bob;
+	bobPC2 -> bob;
+
+	alicePC1[label="", image="img/computer.png"];
+	alicePC2[label="", image="img/computer.png"];
+
+	alicePC1 -> alice;
+	alicePC2 -> alice;
+
+	{rank = same; alice bob; }
+
+	alice:w -> alice:w[label="1. Ordner anlegen "];
+	alice -> bob[label="2. Gibt es bob@bob.com"];
+	bob -> alice[label="3. Ja den gibts"];
+	alice -> bob[label="4. Freigabe anfrage"];
+	bob:e -> bob:e[label=" 5. Bestätigung"];
+	bob -> alice[label="6. Auf Änderungen hören", dir="both"];
+}
