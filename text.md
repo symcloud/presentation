@@ -1,99 +1,111 @@
 # Symcloud
 
-Distributed Filestorage and Colaboration-Platform
+Herzlich willkommen zu meinen kurzen Vortrag über das Projekt symCloud.
 
-## Über das Projekt ...
+Einer "Verteilte Filehosting- und Kollaborations- Plattform".
 
-Die Idee zu diesem Projekt kam mir vor etwa einem halben Jahr als wir aufgefordert wurden nach einem Thema für die Master-Arbeit zu suchen. Ich habe mir das Thema ohne konkretes Ziel ausgesucht.
+Viele von euch werden vermutlich mit dieser Aneinanderreihung von Wörtern nicht viel anfangen können, daher werde ich euch heute eine Erklärung dazu liefern.
 
-### ownCloud
+## Vorstellung
 
-Da ich das Projekt ownCloud schon seit einigen Jahren verfolge und das Projekt genial finde, kam mir die Idee etwas zu diesem Thema zu schreiben. Auch versuchte ich in der Vergangenheit schon ein solches Projekt aufzuziehen, um meine eigenen Daten zu verwalten. Dies scheiterte aber und landeten in der Tonne. 
+Jedoch möchte ich anfangen mich vorzustellen. Ich bin Johannes Wachter und studiere an der Fachhochschule Vorarlberg im Studienfach Informatik und mache heuer meinen Master. Nebenbei arbeite ich bei der Firma Massiveart Webservices GmbH hier in Dorbirn. Ich arbeite dort in einem Team, welches ein Open-Source Content-Management-System entwickelt.
 
-Seit ich bei Massiveart an SULU arbeite, kenne ich die Vorzüge der Programmierung mit dem Symfony-Framework. Da kommt einem die Tatsache nicht wirklich entgegen, das ownCloud aufgrund des alters auf weniger Moderne Art entwickelt wurde. Daher fiel es flach eine Erweiterung oder ähnliches für ownCloud zu schreiben.
+## Die Idee
 
-Nach kurzer Recherche, wurde mir bewusst, dass ich auf eine nicht gefüllte Nische gestoßen bin. Es gibt keinen Cloud-Storage auf Symfonybasis, mit dem es möglich wäre eine Plattform wie ownCloud zu implementieren.
+Die Idee zu diesem Projekt entstand schon vor ein paar Jahren, als ich von einem ähnlichen Projekt, namens "ownCloud", gehört habe. Dieses Projekt ist im Grunde das Open-Source Gegenstück zu Dropbox. Damals versuchte ich, so naiv wie ich war, ohne jegliches Vorwissen über solche Plattformen, eine solche Plattform zu entwickeln. Wie es es allerdings denkbar ist, scheiterte diese Projekt und wurde in mein Gehirn einer Schublade eingemottet.
 
-### Punch
+Als dann der Aufruf kam, ein Thema für die Masterarbeit zu finden, dachte ich mir, dass es an der Zeit ist "wissenschaftlich" an die Sache heranzugehen.
 
-Das traf mich wie ein Schlag ...
+Aus diesem Kontext entstand die Idee eben eine solche Plattform zu entwickeln. Im laufe der letzten beiden Monate, driftete die Arbeit jedoch vom Praktischen bzw. Zeigbaren in einem sehr Theoretischen und Technischen Hintergrund ab.
 
-### Spezifikationen
+Der aktuelle mehr oder weniger fixe Titel der Arbeit lautet: 
 
-Die Idee einen Storage auf Basis von Symfony zu entwickeln, der es ermöglichte Dateien zu versionieren, teilen, verteilen und sicher zu verwalten, war geboren.
+	"Evaluierung und Entwicklung eines verteilten Speicherkonzeptes als
+	Grundlage für eine Filehosting- und Kollaborations- Plattform"
 
-## Inspiration Project Xanadu
+Es befasst sich also immer noch mit den Anforderungen an eine Filehosting- und Kollaborations- Plattform, jedoch geht es in der Arbeit mehr um die Konzepte, die es ermöglichen sollen, die Daten zu verwalten.
 
-Nach Recherchen zu diesem Thema fand ich ein hoch Interessantes Projekt aus den 1960er Jahren. Das Projekt Xanadu. Es wurde eben in der 60ern von dem US-Amerikanischen Philosophen Ted Nelson initiiert.
+Daher kann ich euch heute leider nur über diese Konzepte erzählen. Jedoch versuche ich es so zu gestalten, dass alle von euch eine Idee haben werden, wie ein solches Konzept funktionieren kann.
 
-### Project Xanadu
+### Das Szenario
 
-Er befasste sich in diesem Projekt mit den Themen Transclusion von Dokumenten und prägte damit den Begriff des Hypertext. Das heutige HTML ist eine Teilmenge seiner Specifikation, die er 1974 und 1981 in den Bücher Dream Machines und Literary Machines veröffentlichte. Das Projekt hatte das Ziel Computernetzwerke mit einer intuitiven Oberfläche zu bauen, die in der Lage sind Relationen zwischen Dokumente effizient zu verwalten und darzustellen.
+Das Konzept versuche ich euch anhand eines kleinen Szenarios zu erläutern.
 
-Ted Nelson arbeitete sein Leben lang daran die Software zu implementieren. In einem Artikel des Wired Magazins wurde es 1995 das "am längsten dauernde Vaporware-Projekt in der Geschichte der EDV" genannt. In einem empörten Brief an die Wired Redaktion wendete Nelson ein, dass einige Aspekte seiner Vision dabei waren, durch Tim Berners-Lees Erfindung des World Wide Webs umgesetzt zu werden.
+### Personas
 
-Obwohl er die Umsetzung von Berners-Lee ablehnte ...
+Nehmen wir an wir haben folgende Personen:
 
-### Zitat
+* Alice: eine Jurastudentin im 2. Semester, Sie beschäftigt sich stark mit dem Datenschutz
+* Bob: ein Informatikstudent und ein Technikbegeisterter Bastler
 
-„HTML ist exakt was wir zu VERHINDERN versucht haben - ständig tote Links, Links die nur nach außen führen, Zitate, die man nicht zu ihren Ursprüngen zurückverfolgen kann, keine Versionsverwaltung, keine Rechteverwaltung.“
-– Ted Nelson
+Die Personas der beiden tun hier nichts zur Sache, allerdings zeigen sie welche Zielpersonen das Projekt anspricht.
 
-### Features
+Alice
 
-Das Projekt definierte schon zu Beginn Features wie:
+:   kennt die Risiken des Kontrollverlust ihrer Daten und weiß wie einfach Geheimdienste Daten von Drittanbiertern absaugen können. Daher sucht Sie aktiv nach freien Alternativen zu kommerziellen Cloud-Lösungen.
 
-* Transclusion (also die teilweise Einbindung von Objekte in eine anderes) - Zitate
-* Bidirektionale Links zwischen den Dokumenten
-* Micropayment für Transclusion Zitate oder andere Dokumenten verwertung
-* Versionen Dateien sollen versioniert werden und Versionen sollen immer erreichbar bleiben, wenn sie veröffentlicht wurden.
-* Redundanzen auf Speicherebene um die Datensicherheit zu erhöhen
+Bob
 
-Der ursprüngliche Entwurf von Xanadu bestand aus 17 Thesen. 
+:   begeistert sich für Technik und bastelt gerne an seinem eigenen kleinen Ökosystem.
 
-### Wichtige Thesen
+### Alleinstehende Server
 
-Einige davon sind relevant für ein Projekt wie Symcloud:
+Beide haben sich die Software symCloud auf Ihren Servern installiert, um die Daten von Ihrem Rechnen in Ihrer eigenen Cloud zu verwalten. Neben Ihnen sind andere Benutzer aus Ihrem Umfeld auf diesen Servern installiert. Diese Benutzer können jeweils untereinander Daten zusammen verwenden und bearbeiten.
 
-* Every Xanadu server can be operated independently or in a network.
-* Every user can search, retrieve, create and store documents.
-* Every document can be rapidly searched, stored and retrieved without user knowledge of where it is physically stored.
-* Every document is automatically stored redundantly to maintain availability even in case of a disaster.
+Auf diesem Bild sehen Sie hier, wie die beiden Server unabhängig voneinander arbeiten.
 
-## Diaspora*
+Eines Tages treffen sich die Beiden Studenten in einem Fächerübergreifendem Modulfach und wollen nun die Daten dieses Faches jeweils in Ihrer eigenen Cloud verwalten. Aber Sie weigern sich jeweils einen Benutzer im System des anderen anzulegen.
 
-Das zweite Projekt, dass eine Inspirationsquelle war das verteilte Soziale Netzwerk Diaspora.
+### ??? Bild mit ? zwischen den Servern
 
-### Hard Facts
+Das nennt man ein klassisches Dilemma.
 
-Es wurde im Jahre 2010 von den vier Mathematikstudenten Dan Grippi, Maxwell Salzberg, Raphael Sofaer und Ilya Zhitomirskiy initiiert und umgesetzt.
+### ?Simpsons? (http://i.giphy.com/8EmeieJAGjvUI.gif)
 
-### Network
+Jetzt muss man sich Fragen: Ist das Konzept voll zum vergessen?
 
-Die einzelnen Installationen von Diaspora, Pods genannt, bilden zusammen ein Dezentrales Peer-To-Peer Netzwerk um Datensätze wie Bilder oder Kommentare auszutauschen. Dabei gelten bei Diaspora die Grundsätze decentralization, freedom, privacy => you own your data.
+### Verteilte Server
+
+Nein ist es nicht. Den symCloud ist genau für diesen Fall ausgelegt. Es ermöglicht eigenständigen Servern. Die Dateien eines speziellen Benutzers zu teilen. Dazu legt Alice einen neuen Ordner an, den derjenige dann für den Benutzer "bob@bobs-symcloud.com" freigibt. Daraufhin kann der Server von Alice beim Server von Bob nachfragen, ob es den Benutzer bob gibt. Der Server antwortet natürlich ja den gibts. Alice-Server sendet daraufhin die Anfrage zum Teilen des Ordner an der Server von Bob. Der Benutzer Bob kann das dann bestätigen.
+
+Mit der Bestätigung der Anfrage hört der Server von Bob nun auf Änderungen in diesem Ordner, die der Server von Alice automatisch zur Verfügung stellt. Was soviel bedeutet, dass wenn Alice eine Datei bearbeitet, bekommt der Server von Bob das mit und kann die Daten auf seinem Rechner updaten.
+
+Auch umgekehrt ist dies möglich. Wenn Bob eine Datei in dem Ordner bearbeitet, dann leitet der Server von Bob diese Anfrage automatisch an den Server von Alice weiter.
+
+Woraufhin auch Alice die neuesten Versionen der Dateien auf Ihrem Rechner hat.
 
 ### Awesome
 
-Eine Kombination dieser drei Projekte wäre doch awesome nicht?
+Diese Automatismen werden von dem System vollständig und automatisiert ausgeführt.
 
-## All in All
+### Full Qualified Name
 
-Aufgrund dieser Inspirationsquellen, reifte die Idee für die Arbeit immer weiter. Das eigentliche Thema dabei war: Evaluierung und Entwicklung eines Verteilten Speicherkonzeptes als Grundlage für eine Filehosting und Collaboration Platform
+Das einzige was Alice wissen muss um die Daten mit Bob zu teilen, ist sein FullQualifiedName. Also der Name von Bob und die Hostadresse seines Servers.
 
-### Vision
+Danach können die beiden zusammenarbeiten, als ob Sie auf einem System registriert wären ohne das Sie von den "komplexen" Prozessen etwas mitbekommen.
 
-Meine Ideen für das Projekt reichen allerdings noch viel weiter. Durch das einfache Konzept, wäre es möglich jede beliebige Anwendungen miteinander zu verknüpfen, die mit Dateien arbeiten und das Konzept von Symcloud umsetzt. Dabei sollte es nicht auf eine Plattform oder Programmiersprache beschränkt sein. Es sollte mit dem Konzept möglich sein "Alles zu verbinden".
+### Features
 
-### Raw PHP
+Die wichtigsten Features von symCloud im Überblick:
 
-Der Start-Schuss dazu gibt die Implementierung von symCloud in PHP. Es ist als Library implementiert und unabhängig von der Applikation in der es eingesetzt wird. Es verwendet zwar Teile des Symfony Frameworks, kann aber in jede beliebige Applikation eingebunden werden, da es keinerlei andere Abhängigkeiten besitzt. Also wäre es jetzt schon möglich alle PHP Applikationen auf einfachste weise miteinander kommunizieren zu lassen. Das Bootstrap-Script mit silex keine 100 Zeilen lang.
+Verteilung
 
-Auch andere Programmiersprachen sind denkbar wie zum Beispiel Go oder NodeJs.
+:   Haben wir gerade gesehen ist ein zentraler Bestandteil des System.
 
-### Description
+Versionierung
 
-Dafür setzt symCloud auf standardisierte Web-Standards wie zum Beispiel: HTTP, JSON oder REST-Services und auf eine Architektur, die in allen Programmiersprachen entwickelt werden kann.
+:   Jede Änderung an einer Datei bewirkt das erstellen einer Version im System. Daher können Änderungen an einer Datei nachverfolgt und zurückgesetzt werden.
 
-Zusammenfassend ist symCloud keine einzelne Plattform, es ist eine Spezifikation für eine offene Filehosting-Cloud.
+Datensicherheit
 
-## THE END
+:   Was nicht nur bedeutet, dass man seine Dateien auf seinem eigenen Server speichert, sondern auch, dass verteilte Daten davor geschützt werden, dass Sie bei einem Ausfall des Servers nicht verloren gehen. Dies wird erreicht, das Dateien auf verschiedenen Servern erstellt werden. Dabei hat der Benutzer die Freiheit zu sagen, welche Server für Ihn vertrauenswürdig sind und welche nicht.
+
+### Zusammenfassung
+
+SymCloud ist also im gesamten gesehen, für Benutzer eine Möglichkeit, seine Dateien in einer privaten Cloud-Umgebung zu speichern. Dabei haben sie die Freiheit, diese Cloud für sich und Ihr Vertrauensverhältnis anzupassen.
+
+### The End
+
+Danke für eure Zeit.
+
+Ich hoffe ich konnte euch heute etwas neues erzählen und habe ich nicht zu sehr gelangweilt mit meiner ausführung.
