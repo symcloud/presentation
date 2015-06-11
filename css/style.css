@@ -13,3 +13,24 @@
 .smaller-title h1 {
     font-size: 3.7em !important;
 }
+
+#me figure {
+	float: left;
+	width: 50%;
+}
+
+#me ul {
+	float: left;
+	width: 40%;
+	margin-top: 125px;
+	list-style: none;
+}
+
+#me li {
+	font-size: 25px;
+}
+
+#me figure figcaption {
+	font-size: 18px;
+	font-style: italic;
+}
