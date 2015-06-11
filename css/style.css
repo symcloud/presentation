@@ -1,0 +1,15 @@
+.hide-header h1 {
+    display: none;
+}
+
+.img-white img {
+    background-color: white !important;
+}
+
+.author {
+    font-size: 1.25em !important;
+}
+
+.smaller-title h1 {
+    font-size: 3.7em !important;
+}

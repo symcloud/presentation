@@ -1,0 +1,19 @@
+{
+  "name": "symcloud/presentation",
+  "version": "0.0.0",
+  "homepage": "https://github.com/symcloud/presentation",
+  "authors": [
+    "Johannes Wachter <johannes.wachter@massiveart.at>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "reveal.js": "~3.1.0"
+  }
+}
