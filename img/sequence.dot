@@ -1,25 +1,25 @@
-digraph B {	
+graph B {	
 	alice[label="\l\l\l\l\l\l\l\l\l\lhttp://alice.com", image="img/alice.jpg", shape="rectangle"];
 	bob[label="\l\l\l\l\l\l\l\l\l\lhttp://bob.com", image="img/bob.jpg", shape="rectangle"];
 	
 	bobPC1[label="", image="img/computer.png"];
 	bobPC2[label="", image="img/computer.png"];
 
-	bobPC1 -> bob;
-	bobPC2 -> bob;
+	bobPC1 -- bob[dir=forward];
+	bobPC2 -- bob[dir=forward];
 
 	alicePC1[label="", image="img/computer.png"];
 	alicePC2[label="", image="img/computer.png"];
 
-	alicePC1 -> alice;
-	alicePC2 -> alice;
+	alicePC1 -- alice[dir=forward];
+	alicePC2 -- alice[dir=forward];
 
 	{rank = same; alice bob; }
 
-	alice:w -> alice:w[label="1. Ordner anlegen "];
-	alice -> bob[label="2. Gibt es bob@bob.com"];
-	bob -> alice[label="3. Ja den gibts"];
-	alice -> bob[label="4. Freigabe anfrage"];
-	bob:e -> bob:e[label=" 5. Bestätigung"];
-	bob -> alice[label="6. Auf Änderungen hören", dir="both"];
+	alice:w -- alice:w[label="1. Ordner anlegen ", dir=forward];
+	alice:ne -- bob:nw[label="2. Gibt es bob@bob.com", dir=forward];
+	bob -- alice[label="3. Ja den gibts", dir=forward];
+	alice:se -- bob:sw[label="4. Freigabe anfrage", dir=forward];
+	bob:e -- bob:e[label=" 5. Bestätigung", dir=forward];
+	bob:s -- alice:s[label="6. Auf Änderungen hören", dir=both];
 }

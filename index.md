@@ -46,7 +46,7 @@ and share across devices easily—all under your control.
 
 [Quellen der Bilder](http://wikis.zum.de/rmg/Benutzer:Deininger_Matthias/Facharbeit/Alice_Bob_und_Mallory)
 
-## Alleinstehende Server
+## Ausgangspunkt
 
 ![](img/single.png)
 
@@ -82,8 +82,6 @@ and share across devices easily—all under your control.
 * Replikationen auf vertrauenswürdigen Servern
 
 # Zusammenfassung
-
-Du entscheidest wer deine Daten sieht!
 
 # The End
 
