@@ -10,6 +10,7 @@
 
 * Johannes Wachter
 * FH Vorarlberg Master Informatik
+* [MASSIVE ART WebServices GmbH](http://www.massiveart.com/de/)
 * Web Developer [sulu.io](http://www.sulu.io/)
 
 # Die Idee

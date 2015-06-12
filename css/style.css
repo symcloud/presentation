@@ -22,12 +22,12 @@
 #me ul {
 	float: left;
 	width: 40%;
-	margin-top: 125px;
+	margin-top: 115px;
 	list-style: none;
 }
 
 #me li {
-	font-size: 25px;
+	font-size: 22px;
 }
 
 #me figure figcaption {
