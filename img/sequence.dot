@@ -19,7 +19,7 @@ graph B {
 	alice:w -- alice:w[label="1. Ordner anlegen ", dir=forward];
 	alice:ne -- bob:nw[label="2. Gibt es bob@bob.com", dir=forward];
 	bob -- alice[label="3. Ja den gibts", dir=forward];
-	alice:se -- bob:sw[label="4. Freigabe anfrage", dir=forward];
+	alice:se -- bob:sw[label="4. Freigabe-Anfrage", dir=forward];
 	bob:e -- bob:e[label=" 5. Bestätigung", dir=forward];
 	bob:s -- alice:s[label="6. Auf Änderungen hören", dir=both];
 }
