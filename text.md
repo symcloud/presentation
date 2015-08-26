@@ -16,7 +16,7 @@ TODO Vorstellung? und Agenda
 
 Meine Masterarbeit beschäftigt sich mit der Konzeption einer Speicherlösung, die Ideen aus
 verschiedenen Applikationen und Technologien kombiniert, die es seinen Anwendern ermöglicht
-Ihre Daten lokal und socher zu speichern. Diese aber bei Bedarf gezielt an andere Benutzer
+Ihre Daten lokal und sicher zu speichern. Diese aber bei Bedarf gezielt an andere Benutzer
 weiterzugeben, selbst wenn diese nicht auf dem selben Server registiert sind.
 
 Die Idee enstand vor ein paar Jahren als ich auf ein anderen Open-Source Projekt namens ownCloud
@@ -98,9 +98,9 @@ Bei der Implementierung wurde auf bewährte Technologien aus dem Umfeld von PHP 
 Symfony2 vertraut. Auf diese Technologien möchte ich hier nicht genauer eingehen. Dies würde den
 Rahmen dieser Präsentation sprengen.
  
-Enstanden ist währen der Projektzeit ein funktionstüchtiger Prototyp, der die Funktionalen
+Enstanden ist während der Projektzeit ein funktionstüchtiger Prototyp, der die Funktionalen
 Anforderungen erfüllt.
- 
+
 Es wurde eine Bibliothek implementiert, dass eine einfache verteilte Datenbank enthält, das die
 Daten lokal in einem Ordner ablegt und über das Verteilungsprotokoll die Daten an andere bekannte
 Server repliziert. Diese Daten können dann von dem anderen Server verwendet werden.
@@ -112,3 +112,7 @@ Als zusätzliche Komponente wurde ein Synchronisierungstool umgesetzt, mit dem e
 Daten von einem lokalen Ordner mit einem Server zu synchronisieren. Dieses Tool erkennt automatisch
 welche Dateien akutualisiert, erstellt oder gelöscht werden müssen. Diese Funktionalätiten
 funktionieren bidirektional. Das bedeutet, dass das Tool beidseitig Änderungen erkennen kann.
+
+# Fazit
+
+__TODO Fazit ...__
