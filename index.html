@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Verteilte Filehosting- und Kollaborations- Plattform https://github.com/symcloud" />
+  <title>symCloud</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css"/>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="bower_components/reveal.js/css/theme/night.css" id="theme">
+  <link rel="stylesheet" href="css/style.css"/>
+  <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+  <script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = 'bower_components/reveal.js/css/print/pdf.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+  </script>
+  <!--[if lt IE 9]>
+  <script src="bower_components/reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">symCloud</h1>
+    <h2 class="author">Verteilte Filehosting- und Kollaborations- Plattform <a href="https://github.com/symcloud" class="uri">https://github.com/symcloud</a></h2>
+    <h3 class="date"><small>Erstellt von <a href="https://github.com/wachterjohannes">Johannes Wachter</a> | <a href="https://twitter.com/WachterJohannes">@WachterJohannes</a></small></h3>
+</section>
+
+<section><section id="über-mich" class="titleslide slide level1"><h1>Über mich</h1></section><section id="me" class="slide level2 hide-header">
+<h1>me</h1>
+<figure>
+<img src="img/me.jpg" alt="Keeps a smile on his face even in the most desperate phases of a sprint." /><figcaption>“Keeps a smile on his face even in the most desperate phases of a sprint.”</figcaption>
+</figure>
+<ul>
+<li>Johannes Wachter</li>
+<li>FH Vorarlberg Master Informatik</li>
+<li><a href="http://www.massiveart.com/de/">MASSIVE ART WebServices GmbH</a></li>
+<li>Web Developer <a href="http://www.sulu.io/">sulu.io</a></li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+
+  <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+  <script src="bower_components/reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,         // Display controls in the bottom right corner
+        progress: true,         // Display a presentation progress bar
+        history: true,          // Push each slide change to the browser history
+        center: true,                       // Vertical centering of slides
+        maxScale: 1.5,                  // Bounds for smallest/largest possible content scale
+        slideNumber: false,                // Display the page number of the current slide
+        theme: 'night', // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+//          { src: 'bower_components/reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; }, }
+//          { src: 'bower_components/reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+]});
+    </script>
+    </body>
+</html>

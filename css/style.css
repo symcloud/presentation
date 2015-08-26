@@ -1,0 +1,58 @@
+.hide-header h1 {
+    display: none;
+}
+
+.img-white img {
+    background-color: white !important;
+}
+
+.author {
+    font-size: 1.25em !important;
+}
+
+.smaller-title h1 {
+    font-size: 3.7em !important;
+}
+
+#me figure {
+	float: left;
+	width: 50%;
+}
+
+#me ul {
+	float: left;
+	width: 40%;
+	margin-top: 115px;
+	list-style: none;
+}
+
+#me li {
+	font-size: 22px;
+}
+
+#me figure figcaption {
+	font-size: 18px;
+	font-style: italic;
+}
+
+div.half {
+	float: left;
+	width: 48%;
+	margin-bottom: 30px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+
+div.half ul {
+	list-style: none;
+	font-size: 25px;
+	text-align: center;
+}
+
+#personas {
+	font-size: 16px;
+}
+
+#zusammenfassung h1 {
+	font-size: 3.25em;
+}
