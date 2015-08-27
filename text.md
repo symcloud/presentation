@@ -12,84 +12,112 @@ behalten und mit Quelloffenen Lösungen die Daten auf Ihrem eigenen Server zu sp
 
 TODO Vorstellung? und Agenda
 
-# Einführung
+# Motivation
 
 Meine Masterarbeit beschäftigt sich mit der Konzeption einer Speicherlösung, die Ideen aus
-verschiedenen Applikationen und Technologien kombiniert, die es seinen Anwendern ermöglicht
-Ihre Daten lokal und sicher zu speichern. Diese aber bei Bedarf gezielt an andere Benutzer
-weiterzugeben, selbst wenn diese nicht auf dem selben Server registiert sind.
+verschiedenen Applikationen und Technologien kombiniert und es damit den Anwendern ermöglichen
+soll Ihre Daten lokal und sicher zu speichern. Diese aber bei Bedarf gezielt an andere
+Benutzer weiterzugeben, selbst wenn diese nicht auf dem selben Server registiert sind.
 
-Die Idee enstand vor ein paar Jahren als ich auf ein anderen Open-Source Projekt namens ownCloud
-gestoßen bin und reifte dann in den letzten Monaten zu meiner Masterarbeit heran. Zuerst ging
-es bei dem Projekt lediglich um eine Plattform die es ermöglich Dateien zu verwalten und mit 
-anderen zu teilen. Bei der Recherche jedoch erkannte ich, dass die Unabhängigkeit von einem 
-Provider sehr wichtig für die Zielgruppe des Projektes ist. Jeder der verwender will sein 
-eigener Provider sein. Jedoch ist es dann bei klasischen Systemen wie ownCloud oder anderen 
-nur schwer möglich Dateien über die Grenzen des eigenen Servers zu teilen.
+# Einführung
 
-Daher wurde der Fokus zu Beginn der Projektzeit sehr schnell der Fokus auf genau diesen
-Anwendungsfall gelegt.
+Die Idee enstand vor ein paar Jahren als ich auf ein Open-Source Projekt namens ownCloud
+gestoßen bin und reifte dann in den letzten Monaten zu meiner Masterarbeit heran. 
+
+ownCloud ist eine freie Software für das Speichern von Daten (Filehosting) auf einem eigenen
+Server. Bei Einsatz eines entsprechenden Clients wird dieser automatisch mit einem lokalen
+Verzeichnis synchronisiert. Über eine Platform lassen sich die Daten auch im Browser bearbeiten
+und verwalten.
+
+Zuerst ging es bei dem Projekt lediglich um eine Plattform die es ähnlich wie oenCloud ermöglich
+soll, Dateien zu verwalten und mit anderen zu teilen. Bei der Recherche jedoch erkannte ich,
+dass die Unabhängigkeit von einem Provider sehr wichtig für die Zielgruppe des Projektes ist.
+Jeder der Anwender will sein eigener Provider sein. Jedoch ist es dann bei klasischen Systemen
+wie ownCloud oder anderen nur schwer möglich Dateien über die Grenzen des eigenen Servers zu
+teilen.
+
+Daher wurde der Fokus zu Beginn der Projektzeit sehr schnell auf genau diesen Anwendungsfall
+gelegt.
 
 Auf der suche nach Referenzprojekten bin ich schnell auf zwei sehr starke Inspirationsquellen
-gestoßen. Beide Projekte sind in ihrer Zeit gesehen Pilotprojekte und vorreiter ihrer 
+gestoßen. Beide Projekte sind in ihrer Zeit gesehen Pilotprojekte und Vorreiter ihrer 
 Technologien.
 
 ## Projekt Xanadu
 
-Das Projekt Xanadu wurde durch Ted Nelson in den 1960er Jahren initiirt und ist bis heute
-nicht finalisiert worden. Jedoch prägte Ted Nelson mit der Gründung des Projektes und durch
-die Veröffentlichung des wissenschaftlichen Artikels "The Hypertext" im Jahre 1965 den Begriff 
-des Hypertext und inspirierte damit unter anderem Tim Berners-Lee zu der entwicklung des
-WorldWideWeb mehr als zwei Jahrzente später.
+Das Projekt Xanadu wurde durch Theodor Holm Nelson - kurz Ted - in den 1960er Jahren initiirt
+und ist bis heute nicht finalisiert worden. Jedoch prägte Ted Nelson mit der Gründung des
+Projektes und durch die Veröffentlichung des wissenschaftlichen Artikels "The Hypertext" im
+Jahre 1965 den Begriff des Hypertext und inspirierte damit unter anderem Tim Berners-Lee zu
+der Entwicklung des WorldWideWeb mehr als zwei Jahrzente später.
 
 Die Kernausage des Projektes beeinhalten 12 Thesen, die zum Teil im heutigen Web Anwendung
-finden. Jedoch meinte Ted Nelson angesprochen auf das Web in den 1990er Jahren, dass die
-wichtigsten Thesen eben sträflich vernachläsigt wurden.
+finden. Einige dieser Thesen, die nicht oder nur zum Teil umgesetzt wurden, sind für symCloud
+sehr Interresant und werden in der Arbeit genauer betrachtet.
 
-TODO Aussage
+Die Kernaussage dieser 6 ausgewählten Thesen sind:
+
+* Jeder Server kann unabhängig und in einem Verbund von gleichwertigen Servern arbeiten.
+* Jeder Benutzer ist sicher und eindeutig identifizierbar.
+* Jeder Benutzer kann Dokumente durchsuchen, anlegen, hoch und herunterladen.
+* Jedes Dokument besitzt eine Zugriffskontrollliste über die entschieden werden kann welcher
+  Benutzer zugriff beisitzt.
+* Jedes Dokument kann verwendet werden ohne genau zu wissen wo es phyikalisch gespeichert wurde.
+* Jedes Dokument ist zur Sicherheit redundant gespeichert.
+
+__TODO Aussage__
 
 ## Diaspora
 
 Diaspora ist ein Dezentrales Soziales Netzwerk. Es ist vergleichbar mit Facebook welches
 jedoch zentralisiert aufgebaut ist. Was bedeuetet, dass jeder Benutzer der mit anderen
-kommunnizieren will auch bei Facebook registriert sein muss.
+komunnizieren will auch bei Facebook registriert sein muss.
 
 Diaspora geht hier einen anderen Weg. Über ein spezielles Protokoll können z.B. Nachrichten
 auch mit Benutzern ausgetauscht werden, die auf einem anderen Diaspora Server registriert
 sind.
 
+## Ziele
+
+Als Ziel der Arbeit wurde ein funktionsfähiges und erweiterbares Konzept festgelegt, dass
+die Vorteile der eben beschrieben Projekte vereint. Aus diesem Konzept sollte ein Prototyp
+entstehen, der die wichtigsten Komponenten des Konzeptes beinhaltet. 
+
 ## Anforderungen
 
-Die Anforderungen wurden in drei Teilgebiete unterteilt. Die jeweils später im Konzeot
-eingebaut wurden.
+Aus den drei Inspirationsquellen wurden die Anforderungen an ein solches System formuliert
+in drei Teilgebiete unterteilt.
 
 1. Datensicherheit
 2. Filehosting und Filesharing Funktionalitäten
 3. Architektur
 
-Zusätzlich wurde darauf geachtet, dass due Entwicklung auf dem aktuellen Stand der Technik
+Zusätzlich wurde darauf geachtet, dass die Entwicklung auf dem aktuellen Stand der Technik
 und mit einem Fokus auf Wartbarkeit und Erweiterbarkeit umgesetzt wird. 
-
-# Evaluierung
-
-Für die Evaluierung bestehender Technologien, wurden moderne Anwendungen und Technologien
-anhand verschiedener Kriterien untersucht und geeignete Ideen für das Projekt gefunden, die
-dann in das Konzept miteingeflossen sind.
 
 # Konzept
 
-Das Ergebniss der Arbeit ist ein Konzept der verteilten Datenhaltung auf Basis eines
-verteilten Datenmodells. Dieses Konzept ist unabhängig von der Anwendung, in der es verwendet
-wird und kann daher als Bibliothek in verschiedenste Anwendungen bzw. Plattformen integriert
-werden.
+Um ein ausgewogenes Konzept zu erstellen, wurden einige Technologien aus den Bereichen
 
-Das verteilte Datenmoll wird über ein Primärbasiertes Backup Protokoll an die Server verteilt,
-die Zugriff auf die Datei besitzen. Das bedeutet, dass mindestens einer der Registrierten
-Benutzer Zugriff auf die Datei besitzen. Um die Datensicherheit zu erhöhen, können die Daten
-auch an vertrauenswürdige Server verteilt werden, die eigentlich keinen Zugriff auf die Daten
-besitzen. Die Anwendung verhindert dann den Zugriff von unbefugten Servern durch ein Rechtesystem.
-Dadurch können die Daten bei einem Ausfall des eigenen Servers widerhergestellt werden.
- 
+* Verteilte Datenmodelle - GIT
+* Verteilte Daten - Diaspora
+* Verteilte Dateisysteme - NFS und XtreemFS
+* Objekt - Speicherdienste
+* Datenbankgestützte Dateiverwaltung - GridFS
+
+evaluiert.
+
+Die jeweiligen Vorteile dieser Systeme wurden in symCloud kombiniert. Um nur einpaar Beispiele 
+zu nennen:
+
+* Das Datenmodell von GIT erweitert um die Anforderungen vollständig zu erfüllen.
+* Die lose gekoppelte Server-Architektur von Diaspora findet auch Anwendung in der Architektur
+  von symCloud.
+* Mithilfe einer einfachen variante des Primärbasierten-Backup-Protokolls von XtreemFS werden
+  die Objekte in einem Netzwerk von Servern verteilt. Diese Verteilung wird unter anderem von
+  den Benutzerrechten gesteuert. Was bedeutet, dass diejenigen Server eine Kopie der Daten
+  erhalten, auf denen mindestens ein Benutzer registriert ist, der Zugriff auf die Daten besitzt.  
+
 TODO Ergebniss aussage?
  
 # Implementierung
@@ -113,6 +141,16 @@ Daten von einem lokalen Ordner mit einem Server zu synchronisieren. Dieses Tool 
 welche Dateien akutualisiert, erstellt oder gelöscht werden müssen. Diese Funktionalätiten
 funktionieren bidirektional. Das bedeutet, dass das Tool beidseitig Änderungen erkennen kann.
 
+# Probleme
+
+Aktuell stellt die Performance des Prototypen und im speziellen des Verteilungsprotokoll die größten
+Herausforderungen dar. Unter anderem könnte die Implementierung eines "Diff" Algorithmus einen
+Performancegewinn durch geringere Datentransfers erreichen.
+
+Auch eine vollständige implementierung des GIT Protokolls könnte die Performance steigern und die
+Sicherheit erhöhen.
+
+__TODO überarbeiten ...__
+
 # Fazit
 
-__TODO Fazit ...__

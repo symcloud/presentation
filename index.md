@@ -39,23 +39,41 @@
 
 ![](img/owncloud-logo.png)
 
+* Quellofenes Filehosting Portal
+* Alternative zu kommerziellen Betreibern
+
+## Kolaboration {.hide-header}
+
+![](img/single-question-mark.png)
+
 ## Project Xanadu {.hide-header}
 
 ![](img/xanadu-logo.png)
 
+* Theodor Holm Nelson - Philosoph und Informationstechnikpionier
+* 1960 - ?
+
 ## Project Xanadu {.hide-header}
 
-__TODO evtl Thesen ...__
+1. Every Xanadu server can be operated independently or in a network.
+2. Every user is uniquely and securely identified.
+3. Every user can search, retrieve, create and store documents.
+4. Every document can have secure access controls.
+5. Every document can be rapidly searched, stored and retrieved without user know- ledge of where it is physically stored.
+6. Every document is automatically stored redundantly to maintain availability even in case of a disaster.
 
 ## Diaspora {.hide-header}
 
 ![](img/diaspora-logo.png)
 
+* Dezantrales soziales Netzwerk
+* Serverübergreifende Komunikation
+
 # Ziele und Anforderungen
 
 ## Ziele
 
-TODO Ziele
+__TODO Ziele__
 
 ## Anforderungen
 
@@ -67,9 +85,15 @@ TODO Ziele
 
 ## Evaluierung
 
-TODO Resultate
+* Verteilte Daten - Diaspora
+* Verteilte Datenmodelle - GIT
+* Objekt - Speicherdienste
+* Verteilte Dateisysteme - NFS und XtreemFS
+* Datenbankgestützte Dateiverwaltung - GridFS
 
 ## Konzept
+
+__TODO Kombination der Technologien darstellen__ 
 
 # Implementierung
 
@@ -79,11 +103,17 @@ TODO Resultate
 
 ## Bibliothek - distributed storage {.smaller-title}
 
+__TODO Architektur__
+
 ## Plattform - symCloud {.smaller-title}
+
+__TODO Screenshots__
 
 ## Synchronisierung - jibe {.smaller-title}
 
-# Fazit
+__TODO Screenshots__
+
+# Fazit und Probleme
 
 *** 
 
