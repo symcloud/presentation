@@ -143,14 +143,26 @@ funktionieren bidirektional. Das bedeutet, dass das Tool beidseitig Änderungen 
 
 # Probleme
 
+Während der Entwicklung des Konzeptes stellte sich die Kombintation aus Immutable (also unveränderbare)
+und nicht Immutable Objekten, die im Datenmodell von GIT vorhanden sind, als Problem heraus. Die
+Datenbank wurde aus diesem Grund während der Entwicklungszeit immer aufwändiger und komplexer.
+
+Für eine weiterentwicklung des Konzeptes wäre zu Überlegen diese Objekte gesondert zu speichern.
+Dadurch könnte vieles an Komplexität aus der Datenbank entfernt werden. 
+
 Aktuell stellt die Performance des Prototypen und im speziellen des Verteilungsprotokoll die größten
 Herausforderungen dar. Unter anderem könnte die Implementierung eines "Diff" Algorithmus einen
-Performancegewinn durch geringere Datentransfers erreichen.
-
-Auch eine vollständige implementierung des GIT Protokolls könnte die Performance steigern und die
-Sicherheit erhöhen.
-
-__TODO überarbeiten ...__
+Performancegewinn durch geringeren Datentransfers erreichen. Einen Lösungsansatz wird ebenfals in der
+Arbeit kurz beschrieben.
 
 # Fazit
 
+Das in der Arbeit entwickelte Konzept stellt eine gute Grundlage für weitere Entwicklungen dar. Es
+umfasst alle Facetten von Filesharing und -hosting. Durch die Flexibilität ist es möglich auch Große
+Dateien effizient zu speichern, obwohl sich auch hier Verbeserrungsmöglichkeiten während der
+Projektzeit aufgetan haben.
+
+Interresant wäre es auch aus diesem Konzept eine eigenständige Datenbank mit einer wohldefinierten
+Schnittstelle zu schaffen. Diese Datenbank könnte sich dann um alle Facetten des Filehostings kümmern.
+
+__TODO umformulieren (Inhalt ist aber gut)__

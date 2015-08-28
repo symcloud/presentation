@@ -50,7 +50,8 @@
 
 ![](img/xanadu-logo.png)
 
-* Theodor Holm Nelson - Philosoph und Informationstechnikpionier
+* Theodor Holm Nelson<br />
+  <small>Philosoph und Informationstechnikpionier</small>
 * 1960 - ?
 
 ## Project Xanadu {.hide-header}
@@ -73,7 +74,8 @@
 
 ## Ziele
 
-__TODO Ziele__
+* Konzept für Datenhaltung
+* Prototyp
 
 ## Anforderungen
 
@@ -116,11 +118,12 @@ __TODO Kombination der Technologien darstellen__
 
 # Fazit und Probleme
 
-*** 
+## Probleme 
 
-__TODO Probleme__ 
+* Immutable - unveränderbare Objkte
+* Performance Verteilungsprotokoll
 
-*** 
+## Fazit
 
 __TODO Fazit__
 
