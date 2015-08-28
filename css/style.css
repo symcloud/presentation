@@ -48,3 +48,7 @@ div.half ul {
 	font-size: 25px;
 	text-align: center;
 }
+
+#platform img {
+	max-width: 450px;
+}

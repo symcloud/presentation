@@ -103,21 +103,26 @@ __TODO Kombination der Technologien darstellen__
 
 ## Bibliothek - distributed storage {.smaller-title}
 
-__TODO Architektur__
+![](img/distributed-storage.png)
 
-## Plattform - symCloud {.smaller-title}
+## Plattform - symCloud {.smaller-title #platform}
 
-__TODO Screenshots__
+![](img/sulu_symcloud_file_list.png)
+![](img/sulu_symcloud_add_form.png)
 
 ## Synchronisierung - jibe {.smaller-title}
 
-__TODO Screenshots__
+![](img/jibe.png)
 
 # Fazit und Probleme
 
 *** 
 
-__TODO Fazit__ 
+__TODO Probleme__ 
+
+*** 
+
+__TODO Fazit__
 
 # END
 
