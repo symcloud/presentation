@@ -95,7 +95,7 @@
 
 ## Konzept
 
-__TODO Kombination der Technologien darstellen__ 
+![](img/combination.png)
 
 # Implementierung
 
