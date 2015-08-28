@@ -52,3 +52,7 @@ div.half ul {
 #platform img {
 	max-width: 450px;
 }
+
+#end img {
+    max-width: 600px;
+}
