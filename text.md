@@ -24,7 +24,7 @@ Aber nun zur Agenda. Ich habe diese Präsentation in vier Teile aufgeteilt:
 1. Eine Einführung in das Thema und die Inspirationsquellen
 2. Die Resultate und das entstandene Konzept
 3. Die Implementierung und die entstandenen Software Komponenten
-4. Und am Ende noch kurz zu den Herausforderungen und ein kurzes Fazit als Abschluss diese 
+4. Und am Ende noch kurz zu den Herausforderungen und ein kurzes Fazit als Abschluss dieser 
    Präsentation
 
 # Einführung
@@ -65,7 +65,7 @@ sehr interessant und werden in der Arbeit genauer betrachtet.
 
 ## Diaspora
 
-Diaspora ist ein dezentrales soziales Netzwerk. Es ist vergleichbar mit Facebook, welches
+Diaspora ist ein dezentrales soziales-Netzwerk. Es ist vergleichbar mit Facebook, welches
 jedoch zentralisiert aufgebaut ist. Das bedeutet, dass jeder Benutzer der mit anderen
 kommunizieren will, auch bei Facebook registriert sein muss.
 
@@ -73,7 +73,7 @@ Diaspora geht hier einen anderen Weg. Über ein spezielles Protokoll können z.B
 auch mit Benutzern ausgetauscht werden, die auf einem anderen Diaspora Server registriert
 sind.
 
-Diese Architektur erlaubt es den Anwendern, Ihre eigenen Netzwerke zu gestalten und Ihre
+Diese Architektur erlaubt es den Anwendern Ihre eigenen Netzwerke zu gestalten und Ihre
 Daten nur denjenigen zur Verfügung zu stellen, mit denen Sie sie teilen wollen.
 
 ## Ziele
@@ -166,7 +166,7 @@ Dateien effizient zu speichern, obwohl sich auch hier Verbesserungsmöglichkeite
 Projektzeit aufgetan haben. 
 
 Eine sehr große Chance für das Konzept wäre es, daraus eine Datenbank zu implementieren, mit der die
-Platform und die Clients direkt kommunizieren, um den Overhead der Anwendung so gering wie möglich
+Plattform und die Clients direkt kommunizieren, um den Overhead der Anwendung so gering wie möglich
 zu halten.
 
 # Ende
