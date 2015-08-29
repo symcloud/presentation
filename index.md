@@ -19,7 +19,7 @@
 * Einführung
 * Resultate
 * Implementierung
-* Probleme und Fazit
+* Herausforderungen und Fazit
 
 # Einführung
 
@@ -27,8 +27,8 @@
 
 ![](img/owncloud-logo.png)
 
-* Quellofenes Filehosting Portal
-* Alternative zu kommerziellen Betreibern
+* Quelloffenes Filehosting Portal
+* Alternative zu kommerziellen Anbietern
 
 ## Kolaboration {.hide-header}
 
@@ -46,8 +46,8 @@
 
 ![](img/diaspora-logo.png)
 
-* Dezantrales soziales Netzwerk
-* Serverübergreifende Komunikation
+* Dezentrales soziales Netzwerk
+* Serverübergreifende Kommunikation
 
 ## Ziele
 
@@ -66,7 +66,7 @@
 
 * Verteilte Daten - Diaspora
 * Verteilte Datenmodelle - GIT
-* Objekt - Speicherdienste
+* Objekt Speicherdienste - Amazon S3
 * Verteilte Dateisysteme - NFS und XtreemFS
 * Datenbankgestützte Dateiverwaltung - GridFS
 
@@ -76,11 +76,11 @@
 
 # Implementierung
 
-## Technology
+## Technologien
 
 ![](img/symfony-php-logo.jpg)
 
-## Bibliothek - distributed storage {.smaller-title}
+## Bibliothek - "distributed storage" {.smaller-title}
 
 ![](img/distributed-storage.png)
 
@@ -89,20 +89,20 @@
 ![](img/sulu_symcloud_file_list.png)
 ![](img/sulu_symcloud_add_form.png)
 
-## Synchronisierung - jibe {.smaller-title}
+## Synchronisierung - "jibe" {.smaller-title}
 
 ![](img/jibe.png)
 
-# Fazit und Probleme
+# Fazit und Herausforderungen
 
-## Probleme 
+## Herausforderungen 
 
-* Immutable - unveränderbare Objkte
+* Immutable - unveränderbare Objekte
 * Performance Verteilungsprotokoll
 
 ## Fazit
 
-# END {.combine}
+# Ende {.combine}
 
 ***
 

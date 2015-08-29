@@ -1,7 +1,7 @@
 digraph B {
     git[label="\l\l\l\lDatenmodell von GIT", image="img/resized/git-logo.png", shape="rectangle", color=white]
-    diaspora[label="\l\l\l\lServer-Architectur von Dispora", image="img/resized/diaspora-logo.png", shape="rectangle", color=white]
-    xtreemfs[label="\l\l\l\lProtokoll-Idee von XtreemFS", image="img/resized/xtreemfs-logo.jpg", shape="rectangle", color=white]
+    diaspora[label="\l\l\l\lServer Architektur von Diaspora", image="img/resized/diaspora-logo.png", shape="rectangle", color=white]
+    xtreemfs[label="\l\l\l\lProtokoll Idee von XtreemFS", image="img/resized/xtreemfs-logo.jpg", shape="rectangle", color=white]
 
     symcloud[label=<<TABLE><TR><TD><IMG SRC="img/resized/symcloud-logo.png"/></TD></TR><TR><TD>symCloud</TD></TR></TABLE>>, shape="rectangle", color=white, fontsize=18, fontname="times bold"]
 
