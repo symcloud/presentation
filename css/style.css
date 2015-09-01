@@ -57,6 +57,7 @@ div.half ul {
     max-width: 600px;
 }
 
-#fazit-und-herausforderungen h1 {
+#fazit-und-herausforderungen h1,
+#herausforderungen h1 {
     font-size: 100px;
 }

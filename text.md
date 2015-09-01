@@ -59,10 +59,6 @@ Projektes und durch die Veröffentlichung des wissenschaftlichen Artikels "The H
 Jahre 1965 den Begriff des Hypertext und inspirierte damit unter anderem Tim Berners-Lee zu
 der Entwicklung des World-Wide-Web mehr als zwei Jahrzehnte später.
 
-Die Kernaussage des Projektes beinhaltet 12 Thesen, die zum Teil im heutigen Web Anwendung
-finden. Einige dieser Thesen, die nicht oder nur zum Teil umgesetzt wurden, sind für symCloud
-sehr interessant und werden in der Arbeit genauer betrachtet.
-
 ## Diaspora
 
 Diaspora ist ein dezentrales soziales-Netzwerk. Es ist vergleichbar mit Facebook, welches
@@ -127,23 +123,26 @@ Anforderungen erfüllt und für Weiterentwicklungen genug Freiraum bereitstellt.
 # Implementierung
 
 Bei der Implementierung wurde auf bewährte Technologien aus dem Umfeld von PHP und dem Framework
-Symfony2 vertraut. Auf diese Technologien möchte ich hier nicht genauer eingehen. Dies würde den
-Rahmen dieser Präsentation sprengen.
+Symfony2 gesetzt.
 
 Entstanden ist während der Projektzeit ein funktionstüchtiger Prototyp, der einen Großteil des
 Konzeptes implementiert.
 
 Es wurde eine Bibliothek implementiert, dass eine einfache verteilte Datenbank enthält. Die
 Daten werden lokal in einem Ordner ablegt und über das Verteilungsprotokoll werden die Daten
-an andere bekannte Server repliziert. Diese können dann von den Servern verwendet werden.
+an andere bekannte Server repliziert.
 
 Diese Bibliothek wurde in eine bestehende Content Management Plattform integriert. Über eine
 einfache Benutzerschnittstelle, können die Benutzer die Daten bearbeiten bzw. erstellen.
 
 Als zusätzliche Komponente wurde ein Synchronisierungstool umgesetzt, mit dem es möglich ist, die
-Daten von einem lokalen Ordner mit einem Server zu synchronisieren. Dieses Tool erkennt automatisch,
-welche Dateien aktualisiert, erstellt oder gelöscht werden müssen. Diese Funktionalitäten
-funktionieren bidirektional. Das bedeutet, dass das Tool beidseitig Änderungen erkennen kann.
+Daten von einem lokalen Ordner mit einem Server zu synchronisieren. 
+
+__Optional:__
+
+Dieses Tool erkennt automatisch, welche Dateien aktualisiert, erstellt oder gelöscht werden müssen.
+Diese Funktionalitäten funktionieren bidirektional. Das bedeutet, dass das Tool beidseitig
+Änderungen erkennen kann.
 
 # Herausforderungen
 
@@ -158,12 +157,14 @@ Aktuell stellt die Performance des Prototypen und im speziellen des Verteilungsp
 Herausforderungen dar. Mit der Implementierung eines "Diff" Algorithmus ein Performancegewinn durch
 geringeren Datentransfers erreicht werden.
 
-# Fazit & Ausblick
+# Fazit
 
 Das in der Arbeit entwickelte Konzept stellt eine gute Grundlage für weitere Entwicklungen dar. Es
 umfasst alle Facetten von Filesharing und -hosting. Durch die Flexibilität ist es möglich auch große
 Dateien effizient zu speichern, obwohl sich auch hier Verbesserungsmöglichkeiten während der
 Projektzeit aufgetan haben. 
+
+# Ausblick
 
 Eine sehr große Chance für das Konzept wäre es, daraus eine Datenbank zu implementieren, mit der die
 Plattform und die Clients direkt kommunizieren, um den Overhead der Anwendung so gering wie möglich
