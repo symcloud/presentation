@@ -7,4 +7,6 @@
         $title.append(html);
         $next.remove();
     });
+
+    $('.titleslide.combine').removeClass('.combine');
 })();

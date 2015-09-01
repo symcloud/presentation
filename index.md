@@ -93,7 +93,7 @@
 
 ![](img/jibe.png)
 
-# Fazit und Herausforderungen
+# Herausforderungen und Fazit
 
 ## Herausforderungen 
 

@@ -162,13 +162,7 @@ geringeren Datentransfers erreicht werden.
 Das in der Arbeit entwickelte Konzept stellt eine gute Grundlage für weitere Entwicklungen dar. Es
 umfasst alle Facetten von Filesharing und -hosting. Durch die Flexibilität ist es möglich auch große
 Dateien effizient zu speichern, obwohl sich auch hier Verbesserungsmöglichkeiten während der
-Projektzeit aufgetan haben. 
-
-# Ausblick
-
-Eine sehr große Chance für das Konzept wäre es, daraus eine Datenbank zu implementieren, mit der die
-Plattform und die Clients direkt kommunizieren, um den Overhead der Anwendung so gering wie möglich
-zu halten.
+Projektzeit aufgetan haben.
 
 # Ende
 
