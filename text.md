@@ -173,3 +173,9 @@ Danke für Ihre Aufmerksamkeit.
 * Snowden Bild
 * Diaspora Logo
 * Jibe Bild
+
+Feilhauer:
+
+- [ ] "Cloud" kommt bei Ihnen nur im direkten Zusammenhang mit SymCloud und OwnCloud vor. Gehen Sie ruhig auch kurz auf das Thema „Cloud“ ein und den Zusammenhang mit Ihrem Thema.
+- [ ] Beim Abschnitt "Ziele" sollten Sie durchaus auch das Konzept der verteilten Speicherung erwähnen.
+- [ ] In der Folie "Herausforderungen und Fazit" ist das Wort "Herausforderungen" merkwürdig umgebrochen.
