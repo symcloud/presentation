@@ -1,6 +1,6 @@
 % symCloud
-% Verteilte Filehosting- und Kollaborations- Plattform [https://github.com/symcloud](https://github.com/symcloud)
-% <small>Erstellt von [Johannes Wachter](https://github.com/wachterjohannes) | [\@WachterJohannes](https://twitter.com/WachterJohannes)</small>
+% Entwicklung eines verteilten Speicherkonzeptes als Grundlage für eine Filehostingplattform
+% <small>Johannes Wachter | Prof. (FH) Dipl. Thomas Feilhauer</small>
 
 # Motivation {.combine}
 
