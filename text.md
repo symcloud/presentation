@@ -167,3 +167,9 @@ Projektzeit aufgetan haben.
 # Ende
 
 Danke für Ihre Aufmerksamkeit.
+
+# TODO
+
+* Snowden Bild
+* Diaspora Logo
+* Jibe Bild
