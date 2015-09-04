@@ -10,18 +10,20 @@
 
 ***
 
-![<small>Erstellt mit [wordle.net](http://www.wordle.net)</small>](img/snowden_tag_cloud.png)
-
-# Agenda {.combine}
-
-***
-
-* Einführung
-* Resultate
-* Implementierung
-* Herausforderungen und Fazit
+![<small>Quelle: [netzpolitik.org](https://netzpolitik.org/ueberwachtes-netz/)</small>](img/snowden.jpg)
 
 # Einführung
+
+## Definition Cloud-Computing {.smaller-title #cloud}
+
+> "Cloud Computing ist ein Modell, das es erlaubt bei Bedarf, jederzeit und überall bequem über ein Netz auf einen geteilten Pool von konfigurierbaren Rechnerressourcen zuzugreifen, die schnell und mit minimalem Managementaufwand oder geringer Serviceprovider-Interaktion zur Verfügung gestellt werden können."
+
+<small>Laut NIST - National Institute of Standards and Technology</small><br/>
+<small>Quelle: [bsi.bund.de](https://www.bsi.bund.de/DE/Themen/CloudComputing/Grundlagen/Grundlagen_node.html)</small>
+
+## Cloud-Stack {.hide-header #cloud-stack}
+
+![<small>Quelle: [blog.qsc.de](http://blog.qsc.de/2012/12/was-hatten-sie-denn-gerne-iaas-paas-oder-saas/)</small>](img/cloud-stack.jpg)
 
 ## ownCloud {.hide-header}
 
@@ -34,7 +36,11 @@
 
 ![](img/single-question-mark.png)
 
-## Project Xanadu {.hide-header}
+## Inspiration
+
+<div class="half border fragment">
+
+### Project Xanadu {.hide-header}
 
 ![](img/xanadu-logo.png)
 
@@ -42,16 +48,23 @@
   <small>Philosoph und Informationstechnikpionier</small>
 * 1960 - ?
 
-## Diaspora {.hide-header}
+</div>
+
+<div class="half margin fragment">
+
+### Diaspora {.hide-header}
 
 ![](img/diaspora-logo.png)
 
 * Dezentrales soziales Netzwerk
 * Serverübergreifende Kommunikation
 
+</div>
+
 ## Ziele
 
 * Konzept für Datenhaltung
+* Inklusive verteilte Datenhaltung
 * Prototyp
 
 ## Anforderungen

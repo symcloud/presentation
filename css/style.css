@@ -43,9 +43,18 @@ div.half {
 	padding-top: 15px;
 }
 
+div.half.margin {
+	margin-left: 20px;
+}
+
+div.half.border {
+	border-right: solid #fff 1px;
+}
+
 div.half ul {
 	list-style: none;
 	font-size: 25px;
+	display: block;
 	text-align: center;
 }
 
@@ -60,4 +69,8 @@ div.half ul {
 #herausforderungen-und-fazit h1,
 #herausforderungen h1 {
     font-size: 100px;
+}
+
+#inspiration img {
+	background-color: white;
 }

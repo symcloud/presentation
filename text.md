@@ -6,28 +6,43 @@ Filehosting-Plattformen sind in der heutigen Zeit allgegenwärtig. Ohne einen Zu
 der allgemein verfügbaren Dienste, ist heutzutage eine Zusammenarbeit in einer Gruppe von
 Menschen, zum Beispiel an einer Universität, kaum möglich.
 
+***
+
 In den letzten Jahren wurde allerdings, nicht zuletzt durch den Wistleblower Edward Snowden
 bekannt, dass genau diese Daten von verschiedensten Quellen abgesaugt und verarbeitet werden.
  
 Diese Angst vor Kontrollverlust bewegt viele Menschen dazu, Ihre Daten am liebsten bei sich zu
 behalten und mit quelloffenen Lösungen die Daten auf Ihrem eigenen Server zu speichern.
 
-Meine Masterarbeit beschäftigt sich mit der Konzeption einer Speicherlösung, die Ideen aus
-verschiedenen Applikationen und Technologien kombiniert und es damit den Anwendern ermöglichen
-soll, Ihre Daten lokal und sicher zu speichern. Diese aber bei Bedarf gezielt an andere
-Benutzer weiterzugeben, selbst wenn diese nicht auf demselben Server registriert sind.
-
-# Agenda
-
-Aber nun zur Agenda. Ich habe diese Präsentation in vier Teile aufgeteilt:
-
-1. Eine Einführung in das Thema und die Inspirationsquellen
-2. Die Resultate und das entstandene Konzept
-3. Die Implementierung und die entstandenen Software Komponenten
-4. Und am Ende noch kurz zu den Herausforderungen und ein kurzes Fazit als Abschluss dieser 
-   Präsentation
+Meine Masterarbeit beschäftigt sich mit der Konzeption einer Speicherlösung, die es dem Anwender
+ermöglichen soll seine Daten lokal und sicher zu verwalten.
 
 # Einführung
+
+Um einordnen zu können, in welchen Bereichen dieses Projekt angesiedelt ist, werde ich nun den
+Begriff Cloud-Computing erläutern.
+
+Cloud-Computing ist zusammengefasst laut dem "National Institute of Standards and Technology":
+ 
+> ein Modell, das es erlaubt bei Bedarf auf einen geteilten Pool von
+> Rechnerresourcen oder Anwendungen zuzugreifen.
+
+***
+
+Grob können die Cloud-Computing Dienste in diese drei Bereiche unterteilt werden:
+  
+* __Infrastructure as a Service__: bildet die unterste Ebene im Cloud Computing. Den Nutzern wird
+  dabei eine IT-Infrastruktur wie etwa Server über das Internet zur Verfügung gestellt.
+* __Platform as a Service__: bietet allgemein Funktionen für die schnelle, kostengünstige
+  Entwicklung und Bereitstellung von Anwendungen.
+* __Application as a Service__: ist die dritte und wohl populärste Form des Cloud Computing, bei
+  der Applikationen im Browser ausgeführt werden.
+
+Die in der Arbeit betrachteten Applikationen und Technologien bewegen sich meist in den oberen
+beiden Schichten PaaS und SaaS. Auch die entstandenen Softwarekomponenten können dort angesiedelt
+werden.
+
+***
 
 Die Idee entstand vor ein paar Jahren, als ich auf ein Open-Source Projekt namens ownCloud
 gestoßen bin. Diese Idee reifte in den letzten Monaten zu meiner Masterarbeit heran. 
@@ -40,18 +55,24 @@ verwalten.
 Zuerst ging es bei dem Projekt lediglich um eine Plattform die es ähnlich wie ownCloud 
 ermöglichen soll, Dateien zu verwalten und mit anderen zu teilen. Bei der Recherche jedoch
 erkannte ich, dass die Unabhängigkeit von einem Provider sehr wichtig für die Zielgruppe
-des Projektes ist. Jeder der Anwender will sein eigener Provider sein. Jedoch ist es
-bei klassischen Systemen wie ownCloud oder auch kommerziellen Anbietern nur schwer 
-möglich, Dateien über die Grenzen des eigenen Servers bzw. Anbieters zu teilen.
+des Projektes ist.
+
+***
+
+Jeder der Anwender will sein eigener Provider sein. Jedoch ist es bei klassischen Systemen
+wie ownCloud oder auch kommerziellen Anbietern nur schwer möglich, Dateien über die Grenzen
+eines Servers bzw. Anbieters hinweg zu teilen.
 
 Daher wurde der Fokus zu Beginn der Projektzeit sehr schnell auf genau diesen Anwendungsfall
 gelegt.
+
+## Inspiration
 
 Auf der Suche nach Referenzprojekten bin ich schnell auf zwei sehr starke Inspirationsquellen
 gestoßen. Beide Projekte sind in ihrer Zeit gesehen Pilotprojekte und Vorreiter ihrer 
 Technologien.
 
-## Projekt Xanadu
+### Projekt Xanadu
 
 Das Projekt Xanadu wurde durch Theodor Holm Nelson - kurz Ted - in den 1960er Jahren initiirt
 und ist bis heute nicht finalisiert worden. Jedoch prägte Ted Nelson mit der Gründung des
@@ -59,7 +80,7 @@ Projektes und durch die Veröffentlichung des wissenschaftlichen Artikels "The H
 Jahre 1965 den Begriff des Hypertext und inspirierte damit unter anderem Tim Berners-Lee zu
 der Entwicklung des World-Wide-Web mehr als zwei Jahrzehnte später.
 
-## Diaspora
+### Diaspora
 
 Diaspora ist ein dezentrales soziales-Netzwerk. Es ist vergleichbar mit Facebook, welches
 jedoch zentralisiert aufgebaut ist. Das bedeutet, dass jeder Benutzer der mit anderen
@@ -78,6 +99,7 @@ Aus diesen Inspirationsquellen wurde das Ziel ausgegeben, ein funktionsfähiges 
 erweiterbares Konzept zu erstellen, mit dem die Vorteile dieser Projekte vereint werden
 können. Es soll dem Anwender die Möglichkeit geben, seine Daten privat auf seinem Server zu
 speichern und Sie denjenigen zur Verfügung stellen, mit denen Sie die Daten teilen wollen.
+Dazu sollte das Konzept auch Punkte enthalten, welche die verteilte Datenhaltung ermöglicht. 
 
 Als zusätzliches Ziel wurde ausgegeben, dass große Teile dieses Konzeptes in einem
 Prototypen realisiert werden, um die Funktionstüchtigkeit zu beweisen.
@@ -138,12 +160,6 @@ einfache Benutzerschnittstelle, können die Benutzer die Daten bearbeiten bzw. e
 Als zusätzliche Komponente wurde ein Synchronisierungstool umgesetzt, mit dem es möglich ist, die
 Daten von einem lokalen Ordner mit einem Server zu synchronisieren. 
 
-__Optional:__
-
-Dieses Tool erkennt automatisch, welche Dateien aktualisiert, erstellt oder gelöscht werden müssen.
-Diese Funktionalitäten funktionieren bidirektional. Das bedeutet, dass das Tool beidseitig
-Änderungen erkennen kann.
-
 # Herausforderungen
 
 Während der Entwicklung des Konzeptes stellte sich die Kombination aus Immutable (also unveränderbare)
@@ -170,12 +186,12 @@ Danke für Ihre Aufmerksamkeit.
 
 # TODO
 
-* Snowden Bild
-* Diaspora Logo
-* Jibe Bild
+- [x] Snowden Bild
+- [x] Diaspora Logo
+- [x] Jibe Bild
 
 Feilhauer:
 
-- [ ] "Cloud" kommt bei Ihnen nur im direkten Zusammenhang mit SymCloud und OwnCloud vor. Gehen Sie ruhig auch kurz auf das Thema „Cloud“ ein und den Zusammenhang mit Ihrem Thema.
-- [ ] Beim Abschnitt "Ziele" sollten Sie durchaus auch das Konzept der verteilten Speicherung erwähnen.
-- [ ] In der Folie "Herausforderungen und Fazit" ist das Wort "Herausforderungen" merkwürdig umgebrochen.
+- [x] "Cloud" kommt bei Ihnen nur im direkten Zusammenhang mit SymCloud und OwnCloud vor. Gehen Sie ruhig auch kurz auf das Thema „Cloud“ ein und den Zusammenhang mit Ihrem Thema.
+- [x] Beim Abschnitt "Ziele" sollten Sie durchaus auch das Konzept der verteilten Speicherung erwähnen.
+- [x] In der Folie "Herausforderungen und Fazit" ist das Wort "Herausforderungen" merkwürdig umgebrochen.
