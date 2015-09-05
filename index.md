@@ -67,12 +67,6 @@
 * Inklusive verteilte Datenhaltung
 * Prototyp
 
-## Anforderungen
-
-1. Datensicherheit
-2. Filehosting und -sharing Funktionalitäten
-3. Architektur
-
 # Resultate
 
 ## Evaluierung
@@ -120,3 +114,11 @@
 ***
 
 ![<small>Erstellt mit [wordle.net](http://www.wordle.net)</small>](img/symcloud-tag-cloud.png)
+
+# Anhang
+
+## Anforderungen
+
+1. Datensicherheit
+2. Filehosting und -sharing Funktionalitäten
+3. Architektur

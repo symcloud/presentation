@@ -104,18 +104,6 @@ Dazu sollte das Konzept auch Punkte enthalten, welche die verteilte Datenhaltung
 Als zusätzliches Ziel wurde ausgegeben, dass große Teile dieses Konzeptes in einem
 Prototypen realisiert werden, um die Funktionstüchtigkeit zu beweisen.
 
-## Anforderungen
-
-Aus den drei Inspirationsquellen wurden die Anforderungen an ein solches System formuliert
-und in drei Teilgebiete unterteilt.
-
-1. Datensicherheit
-2. Filehosting und -sharing Funktionalitäten
-3. Architektur
-
-Zusätzlich wurde darauf geachtet, dass der Prototyp auf dem aktuellen Stand der Technik
-und mit einem Fokus auf Wartbarkeit und Erweiterbarkeit umgesetzt wird. 
-
 # Konzept
 
 Um ein ausgewogenes Konzept zu erstellen, wurden Technologien aus den Bereichen:
@@ -195,3 +183,19 @@ Feilhauer:
 - [x] "Cloud" kommt bei Ihnen nur im direkten Zusammenhang mit SymCloud und OwnCloud vor. Gehen Sie ruhig auch kurz auf das Thema „Cloud“ ein und den Zusammenhang mit Ihrem Thema.
 - [x] Beim Abschnitt "Ziele" sollten Sie durchaus auch das Konzept der verteilten Speicherung erwähnen.
 - [x] In der Folie "Herausforderungen und Fazit" ist das Wort "Herausforderungen" merkwürdig umgebrochen.
+
+*** 
+
+# Anhang
+
+## Anforderungen
+
+Aus den drei Inspirationsquellen wurden die Anforderungen an ein solches System formuliert
+und in drei Teilgebiete unterteilt.
+
+1. Datensicherheit
+2. Filehosting und -sharing Funktionalitäten
+3. Architektur
+
+Zusätzlich wurde darauf geachtet, dass der Prototyp auf dem aktuellen Stand der Technik
+und mit einem Fokus auf Wartbarkeit und Erweiterbarkeit umgesetzt wird. 
