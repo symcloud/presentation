@@ -193,9 +193,13 @@ Feilhauer:
 Aus den drei Inspirationsquellen wurden die Anforderungen an ein solches System formuliert
 und in drei Teilgebiete unterteilt.
 
-1. Datensicherheit
-2. Filehosting und -sharing Funktionalitäten
-3. Architektur
+1. Datensicherheit - nicht nur Schutz vor Fremdzugriff sondern auch Schutz vor Ausfall, Verlust und 
+   unerwarteten Erreignisen
+2. Filehosting und -sharing Funktionalitäten - Dazu zählen Versionierung, Replikationen, Teilen,
+   Zusammenarbeit uvm. Diese Funktionen werden benötigt um mit aktuellen Systemen Schritthaltenzu
+   können
+3. Architektur - Inspiriert durch Diaspora, findet die Lose gekoppelte Server-Architektur Anwendung
+   bei symCloud.
 
 Zusätzlich wurde darauf geachtet, dass der Prototyp auf dem aktuellen Stand der Technik
 und mit einem Fokus auf Wartbarkeit und Erweiterbarkeit umgesetzt wird. 
