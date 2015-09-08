@@ -69,8 +69,7 @@ gelegt.
 ## Inspiration
 
 Auf der Suche nach Referenzprojekten bin ich schnell auf zwei sehr starke Inspirationsquellen
-gestoßen. Beide Projekte sind in ihrer Zeit gesehen Pilotprojekte und Vorreiter ihrer 
-Technologien.
+gestoßen.
 
 ### Projekt Xanadu
 
